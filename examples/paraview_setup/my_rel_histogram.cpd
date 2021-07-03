@@ -1,0 +1,120 @@
+<CustomFilterDefinitions>
+  <CustomProxyDefinition name="my_rel_histogram" group="filters">
+    <CompoundSourceProxy id="15574" servers="1">
+      <Proxy group="filters" type="ExtractHistogram" id="15366" servers="1" compound_name="Histogram1">
+        <Property name="BinCount" id="15366.BinCount" number_of_elements="1">
+          <Element index="0" value="10"/>
+          <Domain name="range" id="15366.BinCount.range"/>
+        </Property>
+        <Property name="CalculateAverages" id="15366.CalculateAverages" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="15366.CalculateAverages.bool"/>
+        </Property>
+        <Property name="CenterBinsAroundMinAndMax" id="15366.CenterBinsAroundMinAndMax" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="15366.CenterBinsAroundMinAndMax.bool"/>
+        </Property>
+        <Property name="Component" id="15366.Component" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="15366.Component.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="CustomBinRanges" id="15366.CustomBinRanges" number_of_elements="2">
+          <Element index="0" value="1"/>
+          <Element index="1" value="58.58634436198539"/>
+          <Domain name="scalar_range" id="15366.CustomBinRanges.scalar_range"/>
+        </Property>
+        <Property name="Input" id="15366.Input" number_of_elements="1">
+          <Domain name="groups" id="15366.Input.groups"/>
+          <Domain name="input_array" id="15366.Input.input_array"/>
+          <Domain name="input_type" id="15366.Input.input_type"/>
+        </Property>
+        <Property name="SelectInputArray" id="15366.SelectInputArray" number_of_elements="5">
+          <Element index="0" value=""/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="Quality_Aspect Beta_14"/>
+          <Domain name="array_list" id="15366.SelectInputArray.array_list">
+            <String text="Quality_Aspect Beta_14"/>
+            <String text="Quality_Aspect Frobenius_13"/>
+            <String text="Quality_Aspect Gamma_15"/>
+            <String text="Quality_Aspect Ratio_2"/>
+            <String text="Quality_Collapse Ratio_12"/>
+            <String text="Quality_Condition_11"/>
+            <String text="Quality_Distortian_10"/>
+            <String text="Quality_Edge Ratio_1"/>
+            <String text="Quality_Jacobian_9"/>
+            <String text="Quality_Minimum Dihedral Angle_8"/>
+            <String text="Quality_Radius Ratio_0"/>
+            <String text="Quality_Relative Size Squared_7"/>
+            <String text="Quality_Scaled Jacobian_6"/>
+            <String text="Quality_Shape and Size_3"/>
+            <String text="Quality_Shape_5"/>
+            <String text="Quality_Volume_4"/>
+          </Domain>
+        </Property>
+        <Property name="UseCustomBinRanges" id="15366.UseCustomBinRanges" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="15366.UseCustomBinRanges.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="ProgrammableFilter" id="15425" servers="1" compound_name="ProgrammableFilter1">
+        <Property name="CopyArrays" id="15425.CopyArrays" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="15425.CopyArrays.bool"/>
+        </Property>
+        <Property name="InformationScript" id="15425.InformationScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Input" id="15425.Input" number_of_elements="1">
+          <Proxy value="15366" output_port="0"/>
+          <Domain name="groups" id="15425.Input.groups"/>
+          <Domain name="input_type" id="15425.Input.input_type"/>
+        </Property>
+        <Property name="OutputDataSetType" id="15425.OutputDataSetType" number_of_elements="1">
+          <Element index="0" value="8"/>
+          <Domain name="enum" id="15425.OutputDataSetType.enum">
+            <Entry value="8" text="Same as Input"/>
+            <Entry value="0" text="vtkPolyData"/>
+            <Entry value="2" text="vtkStructuredGrid"/>
+            <Entry value="3" text="vtkRectilinearGrid"/>
+            <Entry value="4" text="vtkUnstructuredGrid"/>
+            <Entry value="6" text="vtkImageData"/>
+            <Entry value="10" text="vtkUniformGrid"/>
+            <Entry value="13" text="vtkMultiblockDataSet"/>
+            <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+            <Entry value="32" text="vtkHyperTreeGrid"/>
+            <Entry value="19" text="vtkTable"/>
+            <Entry value="33" text="vtkMolecule"/>
+          </Domain>
+        </Property>
+        <Property name="PythonPath" id="15425.PythonPath" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Script" id="15425.Script" number_of_elements="1">
+          <Element index="0" value="import numpy as np&#xa;&#xa;input = inputs[0]&#xa;histogram_data = input.RowData[&#x22;bin_values&#x22;]&#xa;n = np.sum(histogram_data)&#xa;&#xa;output.RowData.append(histogram_data / n, &#x22;bin_values&#x22;)"/>
+        </Property>
+        <Property name="TimestepValues" id="15425.TimestepValues"/>
+        <Property name="UpdateExtentScript" id="15425.UpdateExtentScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+      </Proxy>
+      <ExposedProperties>
+        <Property name="BinCount" proxy_name="Histogram1" exposed_name="Bin Count"/>
+        <Property name="CalculateAverages" proxy_name="Histogram1" exposed_name="Calculate Averages"/>
+        <Property name="CenterBinsAroundMinAndMax" proxy_name="Histogram1" exposed_name="Center Bins Around Min And Max"/>
+        <Property name="Component" proxy_name="Histogram1" exposed_name="Component"/>
+        <Property name="CustomBinRanges" proxy_name="Histogram1" exposed_name="Custom Bin Ranges"/>
+        <Property name="Input" proxy_name="Histogram1" exposed_name="Input"/>
+        <Property name="SelectInputArray" proxy_name="Histogram1" exposed_name="Select Input Array"/>
+        <Property name="UseCustomBinRanges" proxy_name="Histogram1" exposed_name="Use Custom Bin Ranges"/>
+      </ExposedProperties>
+      <OutputPort name="Output" proxy="ProgrammableFilter1" port_index="0"/>
+      <Hints>
+        <ShowInMenu/>
+      </Hints>
+    </CompoundSourceProxy>
+  </CustomProxyDefinition>
+</CustomFilterDefinitions>

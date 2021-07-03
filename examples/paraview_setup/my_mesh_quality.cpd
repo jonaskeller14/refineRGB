@@ -1,0 +1,1685 @@
+<CustomFilterDefinitions>
+  <CustomProxyDefinition name="my_mesh_quality" group="filters">
+    <CompoundSourceProxy id="41620" servers="1">
+      <Proxy group="filters" type="MeshQuality" id="26722" servers="1" compound_name="Aspect Beta">
+        <Property name="HexQualityMeasure" id="26722.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26722.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26722.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26722.Input.groups"/>
+          <Domain name="input_type" id="26722.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26722.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26722.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26722.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="29"/>
+          <Domain name="enum" id="26722.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26722.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26722.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26699" servers="1" compound_name="Aspect Frobenius">
+        <Property name="HexQualityMeasure" id="26699.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26699.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26699.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26699.Input.groups"/>
+          <Domain name="input_type" id="26699.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26699.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26699.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26699.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="3"/>
+          <Domain name="enum" id="26699.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26699.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26699.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26734" servers="1" compound_name="Aspect Gamma">
+        <Property name="HexQualityMeasure" id="26734.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26734.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26734.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26734.Input.groups"/>
+          <Domain name="input_type" id="26734.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26734.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26734.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26734.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="27"/>
+          <Domain name="enum" id="26734.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26734.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26734.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="18659" servers="1" compound_name="Aspect Ratio">
+        <Property name="HexQualityMeasure" id="18659.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="18659.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="18659.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="18659.Input.groups"/>
+          <Domain name="input_type" id="18659.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="18659.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="18659.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="18659.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="enum" id="18659.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="18659.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="18659.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26676" servers="1" compound_name="Collapse Ratio">
+        <Property name="HexQualityMeasure" id="26676.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26676.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26676.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26676.Input.groups"/>
+          <Domain name="input_type" id="26676.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26676.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26676.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26676.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="7"/>
+          <Domain name="enum" id="26676.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26676.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26676.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26319" servers="1" compound_name="Condition">
+        <Property name="HexQualityMeasure" id="26319.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26319.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26319.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26319.Input.groups"/>
+          <Domain name="input_type" id="26319.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26319.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26319.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26319.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="9"/>
+          <Domain name="enum" id="26319.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26319.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26319.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26307" servers="1" compound_name="Distortion">
+        <Property name="HexQualityMeasure" id="26307.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26307.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26307.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26307.Input.groups"/>
+          <Domain name="input_type" id="26307.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26307.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26307.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26307.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="15"/>
+          <Domain name="enum" id="26307.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26307.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26307.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="18647" servers="1" compound_name="Edge Ratio">
+        <Property name="HexQualityMeasure" id="18647.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="18647.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="18647.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="18647.Input.groups"/>
+          <Domain name="input_type" id="18647.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="18647.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="18647.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="18647.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="18647.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="18647.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="18647.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26284" servers="1" compound_name="Jacobian">
+        <Property name="HexQualityMeasure" id="26284.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26284.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26284.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26284.Input.groups"/>
+          <Domain name="input_type" id="26284.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26284.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26284.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26284.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="25"/>
+          <Domain name="enum" id="26284.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26284.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26284.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26261" servers="1" compound_name="Minimum Dihedral Angle">
+        <Property name="HexQualityMeasure" id="26261.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26261.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26261.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26261.Input.groups"/>
+          <Domain name="input_type" id="26261.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26261.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26261.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26261.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="6"/>
+          <Domain name="enum" id="26261.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26261.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26261.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="18334" servers="1" compound_name="Radius Ratio">
+        <Property name="HexQualityMeasure" id="18334.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="18334.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="18334.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="18334.Input.groups"/>
+          <Domain name="input_type" id="18334.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="18334.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="18334.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="18334.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="18334.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="18334.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="18334.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26238" servers="1" compound_name="Relative Size Squared">
+        <Property name="HexQualityMeasure" id="26238.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26238.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26238.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26238.Input.groups"/>
+          <Domain name="input_type" id="26238.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26238.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26238.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26238.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="12"/>
+          <Domain name="enum" id="26238.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26238.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26238.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26215" servers="1" compound_name="Scaled Jacobian">
+        <Property name="HexQualityMeasure" id="26215.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26215.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26215.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26215.Input.groups"/>
+          <Domain name="input_type" id="26215.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26215.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26215.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26215.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="10"/>
+          <Domain name="enum" id="26215.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26215.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26215.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26192" servers="1" compound_name="Shape">
+        <Property name="HexQualityMeasure" id="26192.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26192.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26192.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26192.Input.groups"/>
+          <Domain name="input_type" id="26192.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26192.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26192.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26192.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="13"/>
+          <Domain name="enum" id="26192.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26192.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26192.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="19366" servers="1" compound_name="Shape and Size">
+        <Property name="HexQualityMeasure" id="19366.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="19366.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="19366.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="19366.Input.groups"/>
+          <Domain name="input_type" id="19366.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="19366.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="19366.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="19366.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="14"/>
+          <Domain name="enum" id="19366.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="19366.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="19366.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="MeshQuality" id="26169" servers="1" compound_name="Volume">
+        <Property name="HexQualityMeasure" id="26169.HexQualityMeasure" number_of_elements="1">
+          <Element index="0" value="5"/>
+          <Domain name="enum" id="26169.HexQualityMeasure.enum">
+            <Entry value="21" text="Diagonal"/>
+            <Entry value="22" text="Dimension"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="26169.Input" number_of_elements="1">
+          <Proxy value="41608" output_port="0"/>
+          <Domain name="groups" id="26169.Input.groups"/>
+          <Domain name="input_type" id="26169.Input.input_type"/>
+        </Property>
+        <Property name="QuadQualityMeasure" id="26169.QuadQualityMeasure" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26169.QuadQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="5" text="Maximum Aspect Frobenius"/>
+            <Entry value="16" text="Maximum Edge Ratio"/>
+            <Entry value="4" text="Mean Aspect Frobenius"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="23" text="Oddy"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="11" text="Shear"/>
+            <Entry value="24" text="Shear and Size"/>
+            <Entry value="17" text="Skew"/>
+            <Entry value="20" text="Stretch"/>
+            <Entry value="18" text="Taper"/>
+            <Entry value="26" text="Warpage"/>
+          </Domain>
+        </Property>
+        <Property name="TetQualityMeasure" id="26169.TetQualityMeasure" number_of_elements="1">
+          <Element index="0" value="19"/>
+          <Domain name="enum" id="26169.TetQualityMeasure.enum">
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="29" text="Aspect Beta"/>
+            <Entry value="27" text="Aspect Gamma"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="7" text="Collapse Ratio"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="25" text="Jacobian"/>
+            <Entry value="6" text="Minimum Dihedral Angle"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+            <Entry value="19" text="Volume"/>
+          </Domain>
+        </Property>
+        <Property name="TriangleQualityMeasure" id="26169.TriangleQualityMeasure" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="enum" id="26169.TriangleQualityMeasure.enum">
+            <Entry value="28" text="Area"/>
+            <Entry value="1" text="Aspect Ratio"/>
+            <Entry value="3" text="Aspect Frobenius"/>
+            <Entry value="9" text="Condition"/>
+            <Entry value="15" text="Distortion"/>
+            <Entry value="0" text="Edge Ratio"/>
+            <Entry value="8" text="Maximum Angle"/>
+            <Entry value="6" text="Minimum Angle"/>
+            <Entry value="10" text="Scaled Jacobian"/>
+            <Entry value="2" text="Radius Ratio"/>
+            <Entry value="12" text="Relative Size Squared"/>
+            <Entry value="13" text="Shape"/>
+            <Entry value="14" text="Shape and Size"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="ProgrammableFilter" id="41608" servers="1" compound_name="input_PF">
+        <Property name="CopyArrays" id="41608.CopyArrays" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="41608.CopyArrays.bool"/>
+        </Property>
+        <Property name="InformationScript" id="41608.InformationScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Input" id="41608.Input" number_of_elements="1">
+          <Domain name="groups" id="41608.Input.groups"/>
+          <Domain name="input_type" id="41608.Input.input_type"/>
+        </Property>
+        <Property name="OutputDataSetType" id="41608.OutputDataSetType" number_of_elements="1">
+          <Element index="0" value="8"/>
+          <Domain name="enum" id="41608.OutputDataSetType.enum">
+            <Entry value="8" text="Same as Input"/>
+            <Entry value="0" text="vtkPolyData"/>
+            <Entry value="2" text="vtkStructuredGrid"/>
+            <Entry value="3" text="vtkRectilinearGrid"/>
+            <Entry value="4" text="vtkUnstructuredGrid"/>
+            <Entry value="6" text="vtkImageData"/>
+            <Entry value="10" text="vtkUniformGrid"/>
+            <Entry value="13" text="vtkMultiblockDataSet"/>
+            <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+            <Entry value="32" text="vtkHyperTreeGrid"/>
+            <Entry value="19" text="vtkTable"/>
+            <Entry value="33" text="vtkMolecule"/>
+          </Domain>
+        </Property>
+        <Property name="PythonPath" id="41608.PythonPath" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Script" id="41608.Script" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="TimestepValues" id="41608.TimestepValues"/>
+        <Property name="UpdateExtentScript" id="41608.UpdateExtentScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="ProgrammableFilter" id="27563" servers="1" compound_name="output_PF">
+        <Property name="CopyArrays" id="27563.CopyArrays" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="27563.CopyArrays.bool"/>
+        </Property>
+        <Property name="InformationScript" id="27563.InformationScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Input" id="27563.Input" number_of_elements="16">
+          <Proxy value="18334" output_port="0"/>
+          <Proxy value="18647" output_port="0"/>
+          <Proxy value="18659" output_port="0"/>
+          <Proxy value="19366" output_port="0"/>
+          <Proxy value="26169" output_port="0"/>
+          <Proxy value="26192" output_port="0"/>
+          <Proxy value="26215" output_port="0"/>
+          <Proxy value="26238" output_port="0"/>
+          <Proxy value="26261" output_port="0"/>
+          <Proxy value="26284" output_port="0"/>
+          <Proxy value="26307" output_port="0"/>
+          <Proxy value="26319" output_port="0"/>
+          <Proxy value="26676" output_port="0"/>
+          <Proxy value="26699" output_port="0"/>
+          <Proxy value="26722" output_port="0"/>
+          <Proxy value="26734" output_port="0"/>
+          <Domain name="groups" id="27563.Input.groups"/>
+          <Domain name="input_type" id="27563.Input.input_type"/>
+        </Property>
+        <Property name="OutputDataSetType" id="27563.OutputDataSetType" number_of_elements="1">
+          <Element index="0" value="8"/>
+          <Domain name="enum" id="27563.OutputDataSetType.enum">
+            <Entry value="8" text="Same as Input"/>
+            <Entry value="0" text="vtkPolyData"/>
+            <Entry value="2" text="vtkStructuredGrid"/>
+            <Entry value="3" text="vtkRectilinearGrid"/>
+            <Entry value="4" text="vtkUnstructuredGrid"/>
+            <Entry value="6" text="vtkImageData"/>
+            <Entry value="10" text="vtkUniformGrid"/>
+            <Entry value="13" text="vtkMultiblockDataSet"/>
+            <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+            <Entry value="32" text="vtkHyperTreeGrid"/>
+            <Entry value="19" text="vtkTable"/>
+            <Entry value="33" text="vtkMolecule"/>
+          </Domain>
+        </Property>
+        <Property name="PythonPath" id="27563.PythonPath" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Script" id="27563.Script" number_of_elements="1">
+          <Element index="0" value="import numpy as np&#xa;&#xa;labels = [&#x22;Mean&#x22;, &#x22;Min&#x22;, &#x22;Max&#x22;, &#x22;std&#x22;, &#x22;var&#x22;, &#x22;Q1&#x22;, &#x22;Q2&#x22;, &#x22;Q3&#x22;, &#x22;P10&#x22;, &#x22;P90&#x22;]&#xa;field_data = np.zeros((len(inputs),len(labels)))&#xa;&#xa;for idx, input in enumerate(inputs):&#xa;    data = input.CellData[&#x22;Quality&#x22;]&#xa;    output.CellData.append(data, f&#x22;Quality_{idx}&#x22;)&#xa;&#xa;    # field data&#xa;    field_data[idx,:] = np.array([&#xa;        np.mean(data),&#xa;        np.min(data),&#xa;        np.max(data),&#xa;        np.std(data),&#xa;        np.var(data),&#xa;        np.percentile(data, 25),&#xa;        np.percentile(data, 50),&#xa;        np.percentile(data, 75),&#xa;        np.percentile(data, 10),&#xa;        np.percentile(data, 90),    &#xa;    ])&#xa;&#xa;  &#xa;for col,lab in zip(field_data.T, labels):&#xa;    output.FieldData.append(col, lab)&#xa;&#xa;&#xa;    "/>
+        </Property>
+        <Property name="TimestepValues" id="27563.TimestepValues"/>
+        <Property name="UpdateExtentScript" id="27563.UpdateExtentScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+      </Proxy>
+      <ExposedProperties>
+        <Property name="CopyArrays" proxy_name="output_PF" exposed_name="Copy Arrays"/>
+        <Property name="OutputDataSetType" proxy_name="output_PF" exposed_name="Output Data Set Type"/>
+        <Property name="Parameters" proxy_name="output_PF" exposed_name="Parameters"/>
+        <Property name="PythonPath" proxy_name="output_PF" exposed_name="Python Path"/>
+        <Property name="InformationScript" proxy_name="output_PF" exposed_name="RequestInformation Script"/>
+        <Property name="UpdateExtentScript" proxy_name="output_PF" exposed_name="RequestUpdateExtent Script"/>
+        <Property name="Script" proxy_name="output_PF" exposed_name="Script"/>
+        <Property name="TimestepValues" proxy_name="output_PF" exposed_name="Timestep Values"/>
+        <Property name="Input" proxy_name="input_PF" exposed_name="input"/>
+      </ExposedProperties>
+      <OutputPort name="output" proxy="output_PF" port_index="0"/>
+      <Hints>
+        <ShowInMenu/>
+      </Hints>
+    </CompoundSourceProxy>
+  </CustomProxyDefinition>
+</CustomFilterDefinitions>
