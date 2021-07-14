@@ -253,16 +253,21 @@ def refine_red_green_bisect(
 ):
     """
     Red-Refinement of marked-for-refinement elements + Green- and Bisect-refinement of neighbours.
-    No hanging nodes.
-    Only for tetrahedral meshes.
-    :param surface_element_set_keyword: (optional)
-    :param element_sets: optional dictionary of element sets {"set-1": [array]}.
-    Each element set contains list with a single array.
-    :param node_sets: optional dictionary of node sets {"set-1": array}
-    :param nodes:
-    :param elements:
-    :param marked_elements:
-    :return: tuple of nodes, elements, ()
+    No hanging nodes. Only for tetrahedral meshes.
+
+    :param nodes: x,y,z coordinates of vertices
+    :param elements: elements described by node-indices
+    :param marked_elements: list of element-indices for refinement
+    :param node_sets: (optional) dictionary of node sets {"set-1": array}
+    :param element_sets: (optional) dictionary of element sets {"set-1": [array]}.
+    :param surface_element_set_keyword: (optional) keyword in set-names which indicate surface nodes/elements
+    :return: tuple of nodes, elements, (node_sets), (element_sets)
+
+    Documentation:
+    - #TODO
+
+    References:
+    - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem
     """
     # RED refinement of marked + non-conforming elements with 5/6 hanging nodes
     red_marked_elements = marked_elements
