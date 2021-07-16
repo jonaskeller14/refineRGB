@@ -1,20 +1,21 @@
 import meshio
 
 
-# TODO: add exampke files, die das hier aufrufen. mach aus allem ein python package
 
 def refine_stl(mesh_file: str, stl_files: list, iterations: int = 1, method: str = "red_green_bisect", save: bool = True, transition: bool = True):
     """
-
+    :param debug: if True, all node/element sets + + marked_elements + green closures are written to node/element data. Each iteration is saved.
+    :param save_format:
+    :param max_elements:
     :param save:
     :param transition:
     :param mesh_file:
-    :param stl_files:
+    :param source_files:
     :param iterations:
     :param method:
     :return:
     """
-    assert method in ["red_green_bisect", "bisect", "red"]
+    assert method in ["RGB", "RGB_T", "B", "R"]
     assert iterations >= 0
 
     initial_mesh = meshio.read(mesh_file)

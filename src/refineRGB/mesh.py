@@ -5,10 +5,6 @@ import meshio
 def label3(nodes: np.ndarray, elements: np.ndarray, marked_elements: np.ndarray):
     """
     Reorder marked-elements so that the first and second node is the longest edge.
-    :param nodes: list of nodes with x,y,z coordinates
-    :param elements:
-    :param marked_elements:
-    :return: updated elements list
     """
     # Compute edge lengths.
     edges = np.concatenate([
@@ -40,9 +36,6 @@ def label3(nodes: np.ndarray, elements: np.ndarray, marked_elements: np.ndarray)
 def fix_order3(nodes: np.ndarray, elements: np.ndarray):
     """
     Fix element order so that the volume is positive.
-    :param nodes:
-    :param elements:
-    :return:
     """
     volume = tetrahedron_volume(nodes, elements, return_pos=False)
     idx = np.where(volume < 0)[0]
@@ -53,10 +46,6 @@ def fix_order3(nodes: np.ndarray, elements: np.ndarray):
 def tetrahedron_volume(nodes: np.ndarray, elements: np.ndarray, return_pos=True):
     """
     Computes volume of a tetrahedron.
-    :param nodes: list of nodes with x,y,z-coordinates
-    :param elements: list of elements with 4-node-indices
-    :param return_pos: return positive value if true
-    :return: volume
     """
     # Computes volume
     d12 = nodes[elements[:, 1], :] - nodes[elements[:, 0], :]
@@ -73,9 +62,6 @@ def tetrahedron_volume(nodes: np.ndarray, elements: np.ndarray, return_pos=True)
 def get_element_midpoints(nodes: np.ndarray, elements: np.ndarray):
     """
     Computes midpoint-coordinates for each element in elements.
-    :param nodes: x,y,z-coordinates
-    :param elements:
-    :return: x,y,z-coordinates of midpoint
     """
     midpoints = np.zeros([len(elements),3])
     for idx,element in enumerate(elements):
@@ -88,10 +74,6 @@ def get_element_midpoints(nodes: np.ndarray, elements: np.ndarray):
 def get_neighbours(elements: np.ndarray, marked_elements: np.ndarray, common_nodes: int = 1):
     """
     Extends selection with all elements which share min. 1 (default) node.
-    :param common_nodes:
-    :param elements:
-    :param marked_elements:
-    :return:
     """
     nodes = np.zeros(np.max(elements)+1, dtype="int8")
     nodes[elements[marked_elements]] = 1
@@ -102,9 +84,6 @@ def get_neighbours(elements: np.ndarray, marked_elements: np.ndarray, common_nod
 def are_face_neighbors(element1: np.ndarray, element2: np.ndarray):
     """
     3 vertices of element1 must be contained also by element2. Does not recognize false elements.
-    :param element1:
-    :param element2:
-    :return:
     """
     return np.sum(np.array([element1]) == np.transpose([element2])) == 3
 
@@ -112,8 +91,6 @@ def are_face_neighbors(element1: np.ndarray, element2: np.ndarray):
 def get_boundary_elements(elements: np.ndarray):
     """
     Returns a list of boundary elements.
-    :param elements:
-    :return:
     """
     nt = len(elements)
     faces = np.concatenate([
@@ -131,8 +108,6 @@ def get_boundary_elements(elements: np.ndarray):
 def get_boundary_nodes(elements: np.ndarray):
     """
     Returns a list of boundary nodes.
-    :param elements:
-    :return:
     """
     faces = np.concatenate([
         elements[:, [0,1,2]],
@@ -149,9 +124,6 @@ def is_boundary_element(elements: np.ndarray, check_elements: np.ndarray):
     """
     Check whether elements are boundary elements, returns True if so.
     Boundary elements are elements with a face which is not also used by another element.
-    :param nodes:
-    :param elements:
-    :param check_elements:
     :return: logical array
     """
     boundary_elements = get_boundary_elements(elements)
@@ -200,11 +172,6 @@ def conservative_intersection(
     Approximate intersection of triangular- and tetrahedral-mesh by creating a box around each element.
     Only the intersection of boxes are detected.
     This leads to more intersections than computing the exact solution.
-    :param tet_nodes:
-    :param tet_elements:
-    :param tri_nodes:
-    :param tri_elements:
-    :return:
     """
     marked_elements_bool = np.zeros(len(tet_elements), dtype=bool)
     min_tet_coord = np.min(tet_nodes[tet_elements], axis=1)
@@ -233,11 +200,6 @@ def first_to_second_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
     Conversion of tetra4-elements (first order) to tetra10-elements (second order).
     Node order: https://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node33.html
     1 - 2 - 3 - 4 - 12 - 23 - 13 - 14 - 24 - 34
-    :param element_sets:
-    :param node_sets:
-    :param nodes:
-    :param elements:
-    :return:
     """
     edges = np.concatenate([
         elements[:, [0, 1]],
@@ -269,11 +231,6 @@ def second_to_first_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
     C3D10 -> C3D4
     Conversion of tetra10-elements (second order)to tetra4-elements (first order).
     Only works, if elements are ordered! This is the case when creating a mesh in Abaqus.
-    :param element_sets:
-    :param node_sets:
-    :param nodes:
-    :param elements:
-    :return:
     """
     # TODO: node sets testen
     all_nodes = np.zeros(len(nodes), dtype=bool)
@@ -295,9 +252,6 @@ def second_to_first_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
 def triangular_to_thin_tetrahedral(nodes: np.ndarray, elements: np.ndarray):
     """
     Conversion of triangular mesh to super thin tetrahedral mesh.
-    :param nodes:
-    :param elements:
-    :return:
     """
     nt = len(elements)
     n = len(nodes)
@@ -313,8 +267,6 @@ def sets_to_data(mesh: meshio.Mesh):
     """
     Add point/cell-sets to point/cell-data with value one.
     Useful for visualization of sets for example in Paraview.
-    :param mesh: input mesh
-    :return: updated mesh
     """
     nodes = mesh.points
     elements = mesh.cells[0][1]
