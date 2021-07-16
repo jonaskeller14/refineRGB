@@ -1,1 +1,1 @@
-__all__ = ["interface", "refine", "mapping", "mesh", "density_functions", "samples", "help_functions"]
+__all__ = ["interface", "refine", "mapping", "mesh", "density", "samples", "helpers"]

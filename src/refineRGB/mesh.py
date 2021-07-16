@@ -213,13 +213,19 @@ def first_to_second_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
     edges, idx, j = np.unique(edges, axis=0, return_index=True, return_inverse=True)
     elem2edge = np.reshape(j, [6, len(elements)]).T
     elements = np.concatenate([elements, np.max(elements) + 1 + elem2edge], axis=1)
-    nodes = np.append(nodes, (nodes[edges[:, 0], :] + nodes[edges[:, 1], :]) / 2, axis=0)
+
+    old_nodes = nodes
+    new_nodes = (nodes[edges[:, 0], :] + nodes[edges[:, 1], :]) / 2
+    nodes = np.append(nodes, new_nodes, axis=0)
 
     output = nodes, elements
     if node_sets is not None:
-        # TODO: hier alle zwischennodes hinzufügen wenn beide parents dabei sind
         for key, node_set in node_sets.items():
-            pass
+            node_set_nodes = np.zeros(len(old_nodes), dtype=bool)
+            node_set_nodes[node_set] = True
+            edges_in_set = np.all(node_set_nodes[edges], axis=1)
+            new_set_nodes = len(old_nodes) + np.arange(len(new_nodes))[edges_in_set]
+            node_sets[key] = np.append(node_set, new_set_nodes, axis=0)
         output += (node_sets,)
     if element_sets is not None:
         output += (element_sets,)
@@ -232,12 +238,16 @@ def second_to_first_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
     Conversion of tetra10-elements (second order)to tetra4-elements (first order).
     Only works, if elements are ordered! This is the case when creating a mesh in Abaqus.
     """
-    # TODO: node sets testen
     all_nodes = np.zeros(len(nodes), dtype=bool)
     elements = elements[:, :4]
     unique_nodes = np.unique(elements)
     all_nodes[unique_nodes] = True
-    nodes = nodes[unique_nodes, :]
+
+    nodes_mapper = np.zeros(len(nodes), dtype="int32")
+    nodes_mapper[all_nodes] = np.arange(len(all_nodes.nonzero()[0]))
+
+    nodes = nodes[all_nodes]
+    elements = nodes_mapper[elements]
 
     output = nodes, elements
     if node_sets is not None:
@@ -249,15 +259,46 @@ def second_to_first_order(nodes: np.ndarray, elements: np.ndarray, node_sets: di
     return output
 
 
+def first_to_second_order_mesh(mesh: meshio.Mesh):
+    nodes = mesh.points
+    elements = mesh.cells[0][1]
+    node_sets = mesh.point_sets
+    element_sets = mesh.cell_sets
+    nodes, elements, node_sets, element_sets = first_to_second_order(nodes, elements, node_sets, element_sets)
+    new_mesh = meshio.Mesh(
+        points=nodes,
+        cells=[("tetra10", elements), ],
+        point_sets=node_sets,
+        cell_sets=element_sets
+    )
+    return new_mesh
+
+
+def second_to_first_order_mesh(mesh: meshio.Mesh):
+    nodes = mesh.points
+    elements = mesh.cells[0][1]
+    node_sets = mesh.point_sets
+    element_sets = mesh.cell_sets
+    nodes, elements, node_sets, element_sets = second_to_first_order(nodes, elements, node_sets, element_sets)
+    new_mesh = meshio.Mesh(
+        points=nodes,
+        cells=[("tetra", elements), ],
+        point_sets=node_sets,
+        cell_sets=element_sets
+    )
+    return new_mesh
+
+
 def triangular_to_thin_tetrahedral(nodes: np.ndarray, elements: np.ndarray):
     """
     Conversion of triangular mesh to super thin tetrahedral mesh.
     """
     nt = len(elements)
     n = len(nodes)
-    np.random.seed(0)
-    # new node, addition of random noise, so that volume is not zero
-    new_nodes = np.mean(nodes[elements], axis=1) + np.random.uniform(low=-1, high=1) * 1e-6
+    # new node = mean of other nodes + shift new node inside surface
+    v01 = nodes[elements[:, 1]] - nodes[elements[:, 0]]
+    v02 = nodes[elements[:, 2]] - nodes[elements[:, 0]]
+    new_nodes = np.mean(nodes[elements], axis=1) - 1e-3 * np.cross(v01, v02, axis=1)
     nodes = np.append(nodes, new_nodes, axis=0)
     elements = np.append(elements, np.transpose([n + np.arange(nt)]), axis=1)
     return nodes, elements
@@ -285,4 +326,43 @@ def sets_to_data(mesh: meshio.Mesh):
         cell_data[value[0]] = 1
         mesh.cell_data[key] = cell_data
     return mesh
+
+
+def consolidate_data(mesh: meshio.Mesh, **kwargs):
+    new_data = np.zeros(len(mesh.cells[0][1]), dtype="int8")
+    for key, value in kwargs.items():
+        if key not in mesh.cell_sets:
+            continue
+        cell_set = mesh.cell_sets[key][0]
+        new_data[cell_set] = value
+    mesh.cell_data["refinement_regions"] = [new_data]
+    return mesh
+
+
+def get_green_elements(old_elements, new_elements, new_element_sets, marked_elements_key: str = "marked_elements"):
+    assert marked_elements_key in new_element_sets
+    element_set_bool = np.ones(len(new_elements), dtype="int8")
+    # filter out marked_elements
+    marked_elements = new_element_sets[marked_elements_key][0]
+    element_set_bool[marked_elements] = 0
+    # filter out non-refined elements
+    old_elements = np.sort(old_elements, axis=1)
+    new_elements = np.sort(new_elements, axis=1)
+    idx = np.all(old_elements == new_elements[:len(old_elements)], axis=1).nonzero()[0]
+    element_set_bool[idx] = 0
+    return element_set_bool.nonzero()[0]
+
+
+def add_ref_data(ref_mesh: meshio.Mesh, initial_mesh_file: str):
+    initial_mesh = meshio.read(initial_mesh_file)
+    initial_elements = np.sort(initial_mesh.cells[0][1], axis=1)
+    ref_elements = np.sort(ref_mesh.cells[0][1], axis=1)
+    n_t_ref = len(ref_elements)
+    n_t_inital = len(initial_elements)
+    data = np.ones(n_t_ref, dtype="int8")
+    comparison = np.all(initial_elements == ref_elements[:n_t_inital], axis=1)
+    data[:n_t_inital] = np.logical_not(comparison)
+    ref_mesh.cell_data["refined"] = [data]
+    return ref_mesh
+
 

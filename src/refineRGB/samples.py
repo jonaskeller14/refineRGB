@@ -4,10 +4,11 @@ import meshio
 import numpy as np
 
 
-def create_cube(path: str, r: float = 1, mesh_size: float = 1e-1, format: str="vtk"): #tODO: implement format
+def create_cube(path: str, r: float = 1, mesh_size: float = 1e-1, format: str="vtk"):
     """
     Creates cube geometry and mesh,
     saves mesh as .vtk as/in path. Reads mesh via meshio.
+    :param format:
     :param r: Radius of cube, or half of the length
     :param mesh_size: global mesh size
     :param path: folder + filename of mesh-file location
@@ -50,6 +51,13 @@ def marked_elements_sphere_intersection(nodes: np.ndarray, elements: np.ndarray,
 
 
 def marked_elements_ball(nodes: np.ndarray, elements: np.ndarray, r_max=0.6):
+    """
+
+    :param nodes:
+    :param elements:
+    :param r_max:
+    :return:
+    """
     norm = np.linalg.norm(nodes, axis=1) ** 2
     marked_nodes = (norm <= r_max) * np.logical_or((nodes[:, 1] >= 2*nodes[:, 0]), (nodes[:, 1] >= -2*nodes[:, 0]))
     marked_elements = np.nonzero(np.any(marked_nodes[elements], axis=1))[0]
@@ -57,6 +65,13 @@ def marked_elements_ball(nodes: np.ndarray, elements: np.ndarray, r_max=0.6):
 
 
 def marked_elements_random(elements: np.ndarray, size: float = 0.2, seed: int = None):
+    """
+
+    :param elements:
+    :param size:
+    :param seed:
+    :return:
+    """
     if seed is not None:
         np.random.seed(seed)
     nt = len(elements)

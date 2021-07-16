@@ -1,58 +1,31 @@
 import numpy as np
 from scipy.sparse import csr_matrix
-from help_functions import n_unique_per_row
-from mesh import *
+from .helpers import n_unique_per_row
+from .mesh import *
 
 
-def refine_red_uniform(nodes: np.ndarray, elements: np.ndarray):
-    # Construct data structure
-    edges = np.concatenate([
-        elements[:, [0, 1]],
-        elements[:, [0, 2]],
-        elements[:, [0, 3]],
-        elements[:, [1, 2]],
-        elements[:, [1, 3]],
-        elements[:, [2, 3]],
-    ], axis=0)
-    edges = np.sort(edges, axis=1)
-    edges, idx, j = np.unique(edges, axis=0, return_index=True, return_inverse=True)
-    elem2edge = np.reshape(j, [6, len(elements)]).T
-    elem2dof = np.concatenate([elements, np.max(elements) + 1 + elem2edge], axis=1)
-
-    nel = len(elements)
-
-    # Add new nodes
-    nodes = np.append(nodes, (nodes[edges[:, 0], :] + nodes[edges[:, 1], :]) / 2, axis=0)
-
-    # Refine each tetrahedron into 8 tetrahedrons
-    t = np.arange(nel)
-    # print(t)
-    p = elem2dof
-    elements = np.append(elements, np.zeros([7 * nel, 4], dtype="int32"), axis=0)
-
-    elements[t, :] = np.array([p[t, 0], p[t, 4], p[t, 5], p[t, 6]]).T  # 1
-    elements[1 * nel:2 * nel, :] = np.array([p[t, 4], p[t, 1], p[t, 7], p[t, 8]]).T  # 2
-    elements[2 * nel:3 * nel, :] = np.array([p[t, 5], p[t, 7], p[t, 2], p[t, 9]]).T  # 3
-    elements[3 * nel:4 * nel, :] = np.array([p[t, 6], p[t, 8], p[t, 9], p[t, 3]]).T  # 4
-    # always use diagonal edge 5-8 (-> included in all inner tetrahedrons)
-    elements[4 * nel:5 * nel, :] = np.array([p[t, 4], p[t, 5], p[t, 6], p[t, 8]]).T  # 5
-    elements[5 * nel:6 * nel, :] = np.array([p[t, 4], p[t, 5], p[t, 7], p[t, 8]]).T  # 6
-    elements[6 * nel:7 * nel, :] = np.array([p[t, 5], p[t, 6], p[t, 8], p[t, 9]]).T  # 7
-    elements[7 * nel:8 * nel, :] = np.array([p[t, 5], p[t, 7], p[t, 8], p[t, 9]]).T  # 8
-    return nodes, elements
-
-
-def refine_red(nodes: np.ndarray, elements: np.ndarray, marked_elements: np.ndarray, return_cut_edge=False):
-    # TODO: add sets, nicht schlimm, wenn sie nicht funktionieren
+def refine_red(
+        nodes: np.ndarray,
+        elements: np.ndarray,
+        marked_elements: np.ndarray,
+        return_cut_edge=False
+):
     """
     Regular red-refinement of tetrahedral mesh.
     Only marked-for-refinement elements are refined.
-    Hanging nodes are created!
-    :param nodes:
-    :param elements:
-    :param marked_elements:
-    :param return_cut_edge:
-    :return:
+    Hanging nodes and inconsistent elements are created!
+
+    :param nodes: x,y,z coordinates of vertices
+    :param elements: elements described by node-indices
+    :param marked_elements: list of element-indices for refinement
+    :param return_cut_edge: (optional) if true, the variable "cut_edge" is returned
+    :return: tuple of nodes, elements, (cut_edge)
+
+    Documentation:
+    - #TODO
+
+    References:
+    - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem
     """
     # Data Structure
     n = len(nodes)
@@ -106,13 +79,20 @@ def refine_bisect(
 ):
     """
     Local Refinement via the longest edge bisection.
-    :param surface_element_set_keyword:
-    :param element_sets:
-    :param node_sets:
-    :param nodes: nx3 np.ndarray with x,y,z-coordinates
-    :param elements: nx4 np.ndarray with 4 node-indices for each tetrahedron
-    :param marked_elements: marked-for-refinement element indices
-    :return: nodes, elements np.ndarrays
+
+    :param nodes: x,y,z coordinates of vertices
+    :param elements: elements described by node-indices
+    :param marked_elements: list of element-indices for refinement
+    :param node_sets: (optional) dictionary of node sets {"set-1": array}
+    :param element_sets: (optional) dictionary of element sets {"set-1": [array]}.
+    :param surface_element_set_keyword: (optional) keyword in set-names which indicate surface nodes/elements
+    :return: tuple of nodes, elements, (node_sets), (element_sets)
+
+    Documentation:
+    - #TODO
+
+    References:
+    - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem
     """
     n = len(nodes)
     nt = len(elements)
@@ -241,7 +221,6 @@ def refine_bisect(
         output += (element_sets,)
 
     return output
-
 
 def refine_red_green_bisect(
         nodes: np.ndarray,

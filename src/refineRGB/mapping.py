@@ -1,15 +1,14 @@
 import pymapping
 import meshio
 import numpy as np
-from mesh import triangular_to_thin_tetrahedral
+from .mesh import triangular_to_thin_tetrahedral
 
-
-def stl_to_marked_elements(target_nodes: np.ndarray, target_elements: np.ndarray, files: list):
+def mapping_to_marked_elements(target_nodes: np.ndarray, target_elements: np.ndarray, source_files: list):
     """
     Mapping of 2D-.stl-meshes to 3D-tetrahedral-mesh.
     :param target_nodes:
     :param target_elements:
-    :param files: list of .stl-file-names (paths)
+    :param source_files: list of .stl-file-names (paths)
     :return:
     """
     # target mesh
@@ -19,12 +18,13 @@ def stl_to_marked_elements(target_nodes: np.ndarray, target_elements: np.ndarray
     )
     marked_elements = np.zeros(len(target_elements), dtype="float64")
 
-    for file in files:
-        # source mesh: convert triangular to tetrahedral mesh
-        source_stl_mesh = meshio.read(file)
-        stl_nodes = source_stl_mesh.points
-        stl_elements = source_stl_mesh.cells[0][1]
-        source_nodes, source_elements = triangular_to_thin_tetrahedral(stl_nodes, stl_elements)
+    for file in source_files:
+        source_mesh = meshio.read(file)
+        source_nodes = source_mesh.points
+        source_elements = source_mesh.cells[0][1]
+        # convert triangular to thin tetrahedral mesh
+        if source_elements.shape[1] == 3:
+            source_nodes, source_elements = triangular_to_thin_tetrahedral(source_nodes, source_elements)
         source_mesh = meshio.Mesh(
             points=source_nodes.astype("float64"),
             cells=[("tetra", source_elements), ],

@@ -1,7 +1,7 @@
 import numpy as np
 import meshio
 from scipy import interpolate
-from mesh import get_element_midpoints
+from .mesh import get_element_midpoints
 
 
 def add_cell_data_to_mesh(mesh: meshio.Mesh, path: str):
@@ -22,12 +22,12 @@ def add_cell_data_to_mesh(mesh: meshio.Mesh, path: str):
     mesh.cell_data["density"] = [density]
     return mesh
 
+
 def get_ids_by_density(mesh: meshio.Mesh, min=0):
-    ids = np.array([], dtype="int32")
-    for idx,d in enumerate(mesh.cell_data["density"][0]):
-        if d >= min:
-            ids = np.append(ids, idx)
+    density = mesh.cell_data["density"][0]
+    ids = np.nonzero(density >= min)[0]
     return ids
+
 
 def interpolate_density(old_mesh: meshio.Mesh, new_nodes: np.ndarray, new_elements: np.ndarray, method="nearest"):
     old_density = old_mesh.cell_data["density"][0]
