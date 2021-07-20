@@ -8,7 +8,7 @@ def refine_red(
         nodes: np.ndarray,
         elements: np.ndarray,
         marked_elements: np.ndarray,
-        return_cut_edge=False
+        return_cut_edge=False,
 ):
     """
     Regular red-refinement of tetrahedral mesh.
@@ -48,16 +48,37 @@ def refine_red(
     nodes = np.append(nodes, (nodes[edges[:, 0], :] + nodes[edges[:, 1], :]) / 2, axis=0)
 
     # Refine each tetrahedron into 8 tetrahedrons
-    elements = np.append(elements, np.zeros([7 * len(marked_elements), 4], dtype="int32"), axis=0)  # Preallocation
+    elements = np.append(elements, np.zeros([7 * len(marked_elements), 4], dtype="int32"), axis=0)  # pre-allocation
     idx = np.arange(len(marked_elements))
     elements[marked_elements] = np.transpose([p[idx, 0], p[idx, 4], p[idx, 5], p[idx, 6]])  # 1 # overwrite old elements
     elements[nt + 0 * nm + idx] = np.transpose([p[idx, 4], p[idx, 1], p[idx, 7], p[idx, 8]])  # 2
     elements[nt + 1 * nm + idx] = np.transpose([p[idx, 5], p[idx, 7], p[idx, 2], p[idx, 9]])  # 3
     elements[nt + 2 * nm + idx] = np.transpose([p[idx, 6], p[idx, 8], p[idx, 9], p[idx, 3]])  # 4
+    # INNER TETRAHEDRONS
+    dis = np.transpose([
+        np.linalg.norm(nodes[p[idx, 6]] - nodes[p[idx, 7]], axis=1),
+        np.linalg.norm(nodes[p[idx, 5]] - nodes[p[idx, 8]], axis=1),
+        np.linalg.norm(nodes[p[idx, 4]] - nodes[p[idx, 9]], axis=1)
+    ])
+    min_idx = np.argmin(dis, axis=1)
+    # inner tetrahedrons - diagonal 6-7
+    idx = np.nonzero(min_idx == 0)[0]
+    elements[nt + 3 * nm + idx] = np.transpose([p[idx, 5], p[idx, 7], p[idx, 6], p[idx, 4]])  # 5
+    elements[nt + 4 * nm + idx] = np.transpose([p[idx, 8], p[idx, 6], p[idx, 7], p[idx, 4]])  # 6
+    elements[nt + 5 * nm + idx] = np.transpose([p[idx, 5], p[idx, 7], p[idx, 9], p[idx, 6]])  # 7
+    elements[nt + 6 * nm + idx] = np.transpose([p[idx, 8], p[idx, 6], p[idx, 9], p[idx, 7]])  # 8
+    # inner tetrahedrons - diagonal 5-8
+    idx = np.nonzero(min_idx == 1)[0]
     elements[nt + 3 * nm + idx] = np.transpose([p[idx, 4], p[idx, 5], p[idx, 6], p[idx, 8]])  # 5
     elements[nt + 4 * nm + idx] = np.transpose([p[idx, 4], p[idx, 5], p[idx, 7], p[idx, 8]])  # 6
     elements[nt + 5 * nm + idx] = np.transpose([p[idx, 5], p[idx, 6], p[idx, 8], p[idx, 9]])  # 7
     elements[nt + 6 * nm + idx] = np.transpose([p[idx, 5], p[idx, 7], p[idx, 8], p[idx, 9]])  # 8
+    # inner tetrahedrons - diagonal 4-9
+    idx = np.nonzero(min_idx == 2)[0]
+    elements[nt + 3 * nm + idx] = np.transpose([p[idx, 5], p[idx, 7], p[idx, 9], p[idx, 4]])  # 5
+    elements[nt + 4 * nm + idx] = np.transpose([p[idx, 8], p[idx, 6], p[idx, 9], p[idx, 4]])  # 6
+    elements[nt + 5 * nm + idx] = np.transpose([p[idx, 5], p[idx, 9], p[idx, 4], p[idx, 6]])  # 7
+    elements[nt + 6 * nm + idx] = np.transpose([p[idx, 8], p[idx, 9], p[idx, 4], p[idx, 7]])  # 8
 
     # Output
     output = nodes, elements
