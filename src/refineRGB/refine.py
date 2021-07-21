@@ -127,7 +127,6 @@ def refine_bisect(
     n_cut = 0
 
     while len(marked_elements) != 0:
-        # print(f"Marked Elements: {marked_elements}")
         # switch element nodes such that elem(t,0:1) is the longest edge of t
         elements = label3(nodes, elements, marked_elements)
         p1 = elements[marked_elements, 0]
