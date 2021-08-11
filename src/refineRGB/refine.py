@@ -21,9 +21,6 @@ def refine_red(
     :param return_cut_edge: (optional) if true, the variable "cut_edge" is returned
     :return: tuple of nodes, elements, (cut_edge)
 
-    Documentation:
-    - #TODO
-
     References:
     - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem
     """
@@ -110,7 +107,7 @@ def refine_bisect(
     :return: tuple of nodes, elements, (node_sets), (element_sets)
 
     Documentation:
-    - #TODO
+    - Keller, Jonas (2021). Implementation and analysis of a local refinement method for tetrahedral meshes
 
     References:
     - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem
@@ -251,19 +248,19 @@ def refine_red_green_bisect(
         surface_element_set_keyword="surface"
 ):
     """
-    Red-Refinement of marked-for-refinement elements + Green- and Bisect-refinement of neighbours.
-    No hanging nodes. Only for tetrahedral meshes.
+    red-green-refinement method for structured or unstructured tetrahedral meshes.
+    Produces a conforming (closed) mesh.
 
     :param nodes: x,y,z coordinates of vertices
     :param elements: elements described by node-indices
-    :param marked_elements: list of element-indices for refinement
-    :param node_sets: (optional) dictionary of node sets {"set-1": array}
-    :param element_sets: (optional) dictionary of element sets {"set-1": [array]}.
-    :param surface_element_set_keyword: (optional) keyword in set-names which indicate surface nodes/elements
+    :param marked_elements: list of element-indices for refinement e.g. [0, 2, 9]
+    :param node_sets: (optional) dictionary of node sets e.g. {"set-1": array}
+    :param element_sets: (optional) dictionary of element sets e.g. {"set-1": [array]}.
+    :param surface_element_set_keyword: (optional) keyword in set-names which indicates surface nodes/elements
     :return: tuple of nodes, elements, (node_sets), (element_sets)
 
     Documentation:
-    - #TODO
+    - Keller, Jonas (2021). Implementation and analysis of a local refinement method for tetrahedral meshes
 
     References:
     - Chen, L. (2008). iFEM: An Innovative Finite Element Method Package in MATLAB. https://github.com/lyc102/ifem

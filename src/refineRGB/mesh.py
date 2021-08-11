@@ -15,8 +15,11 @@ def label3(nodes: np.ndarray, elements: np.ndarray, marked_elements: np.ndarray)
         elements[np.ix_(marked_elements, [1, 3])],
         elements[np.ix_(marked_elements, [2, 3])],
     ], axis=0)
+    # small random perturbations of coordinates of the nodes -> see p. 185 in Eberhardbansch. (1990).
+    # Local Mesh Refinement in 2 and 3 Dimensions. In SCIENCE AND ENGINEERING (Vol. 3).
     np.random.seed(0)
     nodes = nodes * (1 + 1e-3 * np.random.rand(len(nodes), 3))
+
     edge_lengths = np.linalg.norm(nodes[edges[:, 0], :] - nodes[edges[:, 1], :], axis=1)
     elem_edge_lengths = np.reshape(edge_lengths, [6, len(marked_elements)]).T
     idx = np.argmax(elem_edge_lengths, axis=1)
@@ -330,7 +333,7 @@ def sets_to_data(mesh: meshio.Mesh):
     return mesh
 
 
-def consolidate_data(mesh: meshio.Mesh, **kwargs):
+def merge_data(mesh: meshio.Mesh, **kwargs):
     new_data = np.zeros(len(mesh.cells[0][1]), dtype="int8")
     for key, value in kwargs.items():
         if key not in mesh.cell_sets:

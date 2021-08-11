@@ -8,41 +8,48 @@ import time
 
 
 def refine(
-        mesh_file: str,
-        source_files: list,
+        input_mesh: str,
+        mapping_meshes: list,
         iterations: int = 1,
-        method: str = "RGB_T",
+        method: str = "RGB_T1",
         save: bool = True,
         save_format: str = "vtk",
         max_elements: int = -1,
         debug: bool = False,
 ):
     """
-    :param debug: if True, all node/element sets + + marked_elements + green closures are written to node/element data. Each iteration is saved.
-    :param save_format:
-    :param max_elements:
-    :param save:
-    :param transition:
-    :param mesh_file:
-    :param source_files:
-    :param iterations:
-    :param method:
-    :return:
+    interface function for mesh refinement.
+
+    :param input_mesh: unrefined mesh
+    :param mapping_meshes: list of mapping-meshes
+    :param iterations: number of refinement iterations
+    :param method: refinement method e.g. "RGB_T1"
+    :param save: saves refined mesh if set to True
+    :param save_format: only if save=True, file format e.g. ".vtk"
+    :param max_elements: upper boundary for number of elements in refined mesh
+    :param debug: records runtime, saves additional meshes for inspection --> significant increase in runtime
+    :return: refined mesh
+
+    Documentation:
+    - Keller, Jonas (2021). Implementation and analysis of a local refinement method for tetrahedral meshes
     """
-    assert method in ["RGB", "RGB_T", "B", "R"]
+    assert method in ["RGB", "RGB_T1", "RGB_T2", "RGB_T3", "B", "R"]
     assert iterations >= 0
 
-    acc_tic = time.time()
+    acc_tic = time.clock()
 
-    mesh_path = mesh_file.split(".")[0]
-    mesh = meshio.read(mesh_file)
+    # debug preferences
+    debug_record_runtime = True
+    debug_export_meshes = True
+
+    mesh_path = input_mesh.split(".")[0]
+    mesh = meshio.read(input_mesh)
 
     is_tetra10 = mesh.cells[0][1].shape[1] == 10
     if is_tetra10:
         mesh = second_to_first_order_mesh(mesh)
 
-    if debug:
-        mesh.write(f"{mesh_path}_{method}_00.{save_format}")
+    if debug and debug_record_runtime:
         # read or create runtime data
         try:
             df = pd.read_excel(mesh_path + "_runtime.xlsx")
@@ -65,7 +72,7 @@ def refine(
             print("Created new DataFrame")
 
     for iter in range(1,iterations+1):
-        iter_tic = time.time()
+        iter_tic = time.clock()
         # REFINEMENT
         nodes = mesh.points
         elements = mesh.cells[0][1]
@@ -73,21 +80,21 @@ def refine(
         element_sets = mesh.cell_sets
 
         # mapping
-        mapping_tic = time.time()
-        marked_elements = mapping_to_marked_elements(nodes, elements, source_files=source_files)
-        mapping_runtime = time.time() - mapping_tic
-        if debug:
+        mapping_tic = time.clock()
+        marked_elements = mapping_to_marked_elements(nodes, elements, source_files=mapping_meshes)
+        mapping_runtime = time.clock() - mapping_tic
+        if debug and debug_export_meshes:
             element_sets["marked_elements"] = [marked_elements]
             old_elements = elements
 
         # transition
-        if "_T" in method and iter != iterations:  #
-            marked_elements = get_neighbours(elements, marked_elements, common_nodes=1)
-            if debug:
+        if "_T" in method and iter != iterations:
+            marked_elements = get_neighbours(elements, marked_elements, common_nodes=int(method[-1]))
+            if debug and debug_export_meshes:
                 element_sets["marked_elements_transition"] = [marked_elements]
 
         # runtime data
-        if debug:
+        if debug and debug_record_runtime:
             runtime_data = {
                 "time": [time.ctime()],
                 "method": [method],
@@ -100,23 +107,25 @@ def refine(
             }
 
         # refinement
-        refine_tic = time.time()
+        refine_tic = time.clock()
         if method == "R":
-            nodes, elements, node_sets, element_sets = refine_red(nodes, elements, marked_elements, node_sets, element_sets)
+            nodes, elements = refine_red(nodes, elements, marked_elements)
+            node_sets, element_sets = {}, {}
         elif method == "B":
             nodes, elements, node_sets, element_sets = refine_bisect(nodes, elements, marked_elements, node_sets, element_sets)
-        elif method == "RGB" or method == "RGB_T":
+        elif method in ["RGB", "RGB_T1", "RGB_T2", "RGB_T3"]:
             nodes, elements, node_sets, element_sets = refine_red_green_bisect(nodes, elements, marked_elements, node_sets, element_sets)
         if len(elements) > max_elements and max_elements != -1:
             break
         elements = fix_order3(nodes, elements)
 
-        if debug:
+        if debug and debug_record_runtime:
             # runtime data
             runtime_data["after n_nodes"] = [len(nodes)]
             runtime_data["after n_elements"] = [len(elements)]
-            runtime_data["refinement runtime"] = [time.time() - refine_tic]
+            runtime_data["refinement runtime"] = [time.clock() - refine_tic]
 
+        if debug and debug_export_meshes:
             # refinement regions
             if "_T" in method and iter != iterations:
                 element_sets["green_closures"] = [get_green_elements(old_elements, elements, element_sets, marked_elements_key="marked_elements_transition")]
@@ -130,8 +139,9 @@ def refine(
             point_sets=node_sets,
             cell_sets=element_sets
         )
-        if debug:
+        if debug and debug_export_meshes:
             # refinement regions
+            mesh.cell_sets["mapping_again"] = [mapping_to_marked_elements(nodes, elements, source_files=mapping_meshes)]  # optional
             mesh = sets_to_data(mesh)
             if "_T" in method and iter != iterations:
                 kwargs = {
@@ -144,20 +154,21 @@ def refine(
                     "marked_elements": 3,
                     "green_closures": 1
                 }
-            mesh = consolidate_data(mesh, **kwargs)
-            mesh = add_ref_data(mesh, mesh_file)
-            mesh.write(f"{mesh_path}_{method}_{iter:02}.{save_format}")
+            mesh = merge_data(mesh, **kwargs)
+            mesh = add_ref_data(mesh, input_mesh)
+            mesh.write(f"{mesh_path}_{method}_{iter:02}_{iterations:02}.{save_format}")
 
+        if debug and debug_record_runtime:
             # append new runtime data
-            runtime_data["iter runtime"] = [time.time() - iter_tic]
-            runtime_data["accumulated runtime"] = [time.time() - acc_tic]
+            runtime_data["iter runtime"] = [time.clock() - iter_tic]
+            runtime_data["accumulated runtime"] = [time.clock() - acc_tic]
             df = df.append(pd.DataFrame.from_dict(runtime_data))
     # final conversion and export
     if is_tetra10:
         mesh = first_to_second_order_mesh(mesh)
     if save:
         mesh.write(f"{mesh_path}_{method}_refined.{save_format}")
-    if debug:
+    if debug and debug_record_runtime:
         # write .xlsx data
         # df.to_excel(mesh_path + "_runtime.xlsx", index=False, header=True)
         writer = pd.ExcelWriter(mesh_path + "_runtime.xlsx")
