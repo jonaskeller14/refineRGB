@@ -1,0 +1,54 @@
+<CustomFilterDefinitions>
+  <CustomProxyDefinition name="my_rel_histogram_v2" group="filters">
+    <CompoundSourceProxy id="18277" servers="1">
+      <Proxy group="filters" type="ProgrammableFilter" id="15632" servers="1" compound_name="ProgrammableFilter4">
+        <Property name="CopyArrays" id="15632.CopyArrays" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="15632.CopyArrays.bool"/>
+        </Property>
+        <Property name="InformationScript" id="15632.InformationScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Input" id="15632.Input" number_of_elements="1">
+          <Domain name="groups" id="15632.Input.groups"/>
+          <Domain name="input_type" id="15632.Input.input_type"/>
+        </Property>
+        <Property name="OutputDataSetType" id="15632.OutputDataSetType" number_of_elements="1">
+          <Element index="0" value="19"/>
+          <Domain name="enum" id="15632.OutputDataSetType.enum">
+            <Entry value="8" text="Same as Input"/>
+            <Entry value="0" text="vtkPolyData"/>
+            <Entry value="2" text="vtkStructuredGrid"/>
+            <Entry value="3" text="vtkRectilinearGrid"/>
+            <Entry value="4" text="vtkUnstructuredGrid"/>
+            <Entry value="6" text="vtkImageData"/>
+            <Entry value="10" text="vtkUniformGrid"/>
+            <Entry value="13" text="vtkMultiblockDataSet"/>
+            <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+            <Entry value="32" text="vtkHyperTreeGrid"/>
+            <Entry value="19" text="vtkTable"/>
+            <Entry value="33" text="vtkMolecule"/>
+          </Domain>
+        </Property>
+        <Property name="PythonPath" id="15632.PythonPath" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Script" id="15632.Script" number_of_elements="1">
+          <Element index="0" value="import vtk&#xa;import numpy as np&#xa;&#xa;&#xa;def main():&#xa;    rangesbins = np.array([&#xa;        [0, 10, 10],  # 0&#xa;        [0, 10, 10],  # 1&#xa;        [0, 10, 10],  # 2&#xa;        [0, 10, 10],  # 3&#xa;        [0, 10, 10],  # 4&#xa;        [0, 10, 10],  # 5&#xa;        [0, 10, 10],  # 6&#xa;        [0, 10, 10],  # 7&#xa;        [0, 10, 10],  # 8&#xa;        [0, 10, 10],  # 9&#xa;        [0, 10, 10],  # 10&#xa;        [0, 1, 10],  # 11&#xa;        [0, 10, 10],  # 12&#xa;        [0, 10, 10],  # 13&#xa;    ])&#xa;    input = inputs[0]&#xa;    for idx,cd in enumerate(input.CellData):&#xa;        cd_name = cd.GetName()&#xa;        hist, bins = np.histogram(cd, range=rangesbins[idx, :-1], bins=rangesbins[idx, -1])&#xa;        l_outlier = np.sum(cd &#x3c; rangesbins[idx, 0])&#xa;        hist[0] += l_outlier&#xa;        u_outlier = np.sum(cd &#x3e; rangesbins[idx, 1])&#xa;        hist[-1] += u_outlier&#xa;        hist = hist / np.sum(hist)  # density&#xa;        output.RowData.append(hist, cd_name)&#xa;        bins = (bins[:-1] + bins[1:]) / 2&#xa;        output.RowData.append(bins, cd_name + &#x22;_extents&#x22;)&#xa;&#xa;&#xa;if __name__ == &#x27;__main__&#x27;:&#xa;    main()"/>
+        </Property>
+        <Property name="TimestepValues" id="15632.TimestepValues"/>
+        <Property name="UpdateExtentScript" id="15632.UpdateExtentScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+      </Proxy>
+      <ExposedProperties>
+        <Property name="Input" proxy_name="ProgrammableFilter4" exposed_name="Input"/>
+        <Property name="Script" proxy_name="ProgrammableFilter4" exposed_name="Script"/>
+      </ExposedProperties>
+      <OutputPort name="Output" proxy="ProgrammableFilter4" port_index="0"/>
+      <Hints>
+        <ShowInMenu/>
+      </Hints>
+    </CompoundSourceProxy>
+  </CustomProxyDefinition>
+</CustomFilterDefinitions>

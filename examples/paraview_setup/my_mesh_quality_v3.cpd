@@ -1,0 +1,53 @@
+<CustomFilterDefinitions>
+  <CustomProxyDefinition name="my_mesh_quality_v3" group="filters">
+    <CompoundSourceProxy id="29563" servers="1">
+      <Proxy group="filters" type="ProgrammableFilter" id="16125" servers="1" compound_name="ProgrammableFilter2">
+        <Property name="CopyArrays" id="16125.CopyArrays" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="16125.CopyArrays.bool"/>
+        </Property>
+        <Property name="InformationScript" id="16125.InformationScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Input" id="16125.Input" number_of_elements="1">
+          <Domain name="groups" id="16125.Input.groups"/>
+          <Domain name="input_type" id="16125.Input.input_type"/>
+        </Property>
+        <Property name="OutputDataSetType" id="16125.OutputDataSetType" number_of_elements="1">
+          <Element index="0" value="8"/>
+          <Domain name="enum" id="16125.OutputDataSetType.enum">
+            <Entry value="8" text="Same as Input"/>
+            <Entry value="0" text="vtkPolyData"/>
+            <Entry value="2" text="vtkStructuredGrid"/>
+            <Entry value="3" text="vtkRectilinearGrid"/>
+            <Entry value="4" text="vtkUnstructuredGrid"/>
+            <Entry value="6" text="vtkImageData"/>
+            <Entry value="10" text="vtkUniformGrid"/>
+            <Entry value="13" text="vtkMultiblockDataSet"/>
+            <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+            <Entry value="32" text="vtkHyperTreeGrid"/>
+            <Entry value="19" text="vtkTable"/>
+            <Entry value="33" text="vtkMolecule"/>
+          </Domain>
+        </Property>
+        <Property name="PythonPath" id="16125.PythonPath" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+        <Property name="Script" id="16125.Script" number_of_elements="1">
+          <Element index="0" value="import vtk&#xa;import numpy as np&#xa;&#xa;def main():&#xa;    m_values = [0, 27, 3, 1, 7, 9, 25, 6, 2, 12, 10, 13, 14, 19]&#xa;    m_names = [&#x22;Edge Ratio&#x22;, &#x22;Aspect Gamma&#x22;, &#x22;Aspect Frobenius&#x22;, &#x22;Aspect Ratio&#x22;, &#x22;Collapse Ratio&#x22;, &#x22;Condition&#x22;, &#x22;Jacobian&#x22;, &#x22;Minimum Dihedral Angle&#x22;,&#x22;Radius Ratio&#x22;, &#x22;Relative Size Squared&#x22;, &#x22;Scaled Jacobian&#x22;, &#x22;Shape&#x22;, &#x22;Shape and Size&#x22;, &#x22;Volume&#x22;]&#xa;    fd_labels = [&#x22;Mean&#x22;, &#x22;Min&#x22;, &#x22;Max&#x22;, &#x22;std&#x22;, &#x22;var&#x22;, &#x22;Q1&#x22;, &#x22;Q2&#x22;, &#x22;Q3&#x22;, &#x22;P10&#x22;, &#x22;P90&#x22;]&#xa;    fd_values = np.zeros((len(m_values), len(fd_labels)))  &#xa;&#xa;    fd_mean = vtk.vtkDoubleArray()&#xa;    fd_mean.SetName(&#x22;Mean&#x22;)   &#xa;&#xa;    inp = self.GetInputDataObject(0, 0)&#xa;    outp = self.GetOutputDataObject(0)&#xa;&#xa;    for idx in range(len(m_values)):&#xa;        # cell data&#xa;        mesh_quality = vtk.vtkMeshQuality()&#xa;        mesh_quality.SetInputData(inp)&#xa;        mesh_quality.SetTetQualityMeasure(m_values[idx])&#xa;        mesh_quality.Update()&#xa;        &#xa;        vtk_array = mesh_quality.GetOutput().GetCellData().GetVectors(&#x22;Quality&#x22;)&#xa;        vtk_array.SetName(m_names[idx] + &#x22;_&#x22; + str(idx))&#xa;        outp.GetCellData().AddArray(vtk_array)&#xa;        &#xa;        # field data&#xa;        array = np.array(vtk_array)&#xa;        fd_values[idx, :] = np.array([&#xa;            np.mean(array),&#xa;            np.min(array),&#xa;            np.max(array),&#xa;            np.std(array),&#xa;            np.var(array),&#xa;            np.percentile(array, 25),&#xa;            np.percentile(array, 50),&#xa;            np.percentile(array, 75),&#xa;            np.percentile(array, 10),&#xa;            np.percentile(array, 90), &#xa;        ])&#xa;    &#xa;    for fd_lab, fd_val_col in zip(fd_labels, fd_values.T):&#xa;        fd = vtk.vtkDoubleArray()&#xa;        fd.SetName(fd_lab)&#xa;        for val in fd_val_col:&#xa;            fd.InsertNextValue(val)&#xa;        outp.GetFieldData().AddArray(fd)&#xa;&#xa;&#xa;&#xa;if __name__ == &#x27;__main__&#x27;:&#xa;    main()"/>
+        </Property>
+        <Property name="TimestepValues" id="16125.TimestepValues"/>
+        <Property name="UpdateExtentScript" id="16125.UpdateExtentScript" number_of_elements="1">
+          <Element index="0" value=""/>
+        </Property>
+      </Proxy>
+      <ExposedProperties>
+        <Property name="Input" proxy_name="ProgrammableFilter2" exposed_name="Input"/>
+      </ExposedProperties>
+      <OutputPort name="Output" proxy="ProgrammableFilter2" port_index="0"/>
+      <Hints>
+        <ShowInMenu/>
+      </Hints>
+    </CompoundSourceProxy>
+  </CustomProxyDefinition>
+</CustomFilterDefinitions>

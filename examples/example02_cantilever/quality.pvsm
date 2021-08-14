@@ -1,0 +1,3266 @@
+<ParaView>
+  <ServerManagerState version="5.8.1">
+    <Proxy group="animation" type="AnimationScene" id="263" servers="16">
+      <Property name="AnimationTime" id="263.AnimationTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="Cues" id="263.Cues" number_of_elements="1">
+        <Proxy value="265"/>
+        <Domain name="groups" id="263.Cues.groups"/>
+      </Property>
+      <Property name="Duration" id="263.Duration" number_of_elements="1">
+        <Element index="0" value="10"/>
+      </Property>
+      <Property name="EndTime" id="263.EndTime" number_of_elements="1">
+        <Element index="0" value="1"/>
+      </Property>
+      <Property name="FramesPerTimestep" id="263.FramesPerTimestep" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="range" id="263.FramesPerTimestep.range"/>
+      </Property>
+      <Property name="GoToFirst" id="263.GoToFirst"/>
+      <Property name="GoToLast" id="263.GoToLast"/>
+      <Property name="GoToNext" id="263.GoToNext"/>
+      <Property name="GoToPrevious" id="263.GoToPrevious"/>
+      <Property name="LockEndTime" id="263.LockEndTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="263.LockEndTime.bool"/>
+      </Property>
+      <Property name="LockStartTime" id="263.LockStartTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="263.LockStartTime.bool"/>
+      </Property>
+      <Property name="Loop" id="263.Loop" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="263.Loop.bool"/>
+      </Property>
+      <Property name="NumberOfFrames" id="263.NumberOfFrames" number_of_elements="1">
+        <Element index="0" value="10"/>
+        <Domain name="range" id="263.NumberOfFrames.range"/>
+      </Property>
+      <Property name="Play" id="263.Play"/>
+      <Property name="PlayMode" id="263.PlayMode" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="263.PlayMode.enum">
+          <Entry value="0" text="Sequence"/>
+          <Entry value="1" text="Real Time"/>
+          <Entry value="2" text="Snap To TimeSteps"/>
+        </Domain>
+      </Property>
+      <Property name="StartTime" id="263.StartTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="Stop" id="263.Stop"/>
+      <Property name="TimeKeeper" id="263.TimeKeeper" number_of_elements="1">
+        <Proxy value="256"/>
+      </Property>
+      <Property name="ViewModules" id="263.ViewModules" number_of_elements="1">
+        <Proxy value="10873"/>
+        <Domain name="groups" id="263.ViewModules.groups"/>
+      </Property>
+    </Proxy>
+    <Proxy group="animation" type="TimeAnimationCue" id="265" servers="16">
+      <Property name="AnimatedDomainName" id="265.AnimatedDomainName" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="AnimatedElement" id="265.AnimatedElement" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="AnimatedPropertyName" id="265.AnimatedPropertyName" number_of_elements="1">
+        <Element index="0" value="Time"/>
+      </Property>
+      <Property name="AnimatedProxy" id="265.AnimatedProxy" number_of_elements="1">
+        <Proxy value="256"/>
+        <Domain name="groups" id="265.AnimatedProxy.groups"/>
+      </Property>
+      <Property name="Enabled" id="265.Enabled" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="265.Enabled.bool"/>
+      </Property>
+      <Property name="EndTime" id="265.EndTime" number_of_elements="1">
+        <Element index="0" value="1"/>
+      </Property>
+      <Property name="KeyFrames" id="265.KeyFrames">
+        <Domain name="groups" id="265.KeyFrames.groups"/>
+      </Property>
+      <Property name="LastAddedKeyFrameIndex" id="265.LastAddedKeyFrameIndex"/>
+      <Property name="StartTime" id="265.StartTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="TimeMode" id="265.TimeMode" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="265.TimeMode.enum">
+          <Entry value="0" text="Normalized"/>
+          <Entry value="1" text="Relative"/>
+        </Domain>
+      </Property>
+      <Property name="UseAnimationTime" id="265.UseAnimationTime" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="265.UseAnimationTime.bool"/>
+      </Property>
+    </Proxy>
+    <Proxy group="coprocessing" type="CatalystGlobalOptions" id="6207" servers="1">
+      <Property name="EnableLive" id="6207.EnableLive" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="6207.EnableLive.bool"/>
+      </Property>
+      <Property name="FileNamePadding" id="6207.FileNamePadding" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="range" id="6207.FileNamePadding.range"/>
+      </Property>
+      <Property name="ForceFirstOutput" id="6207.ForceFirstOutput" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="6207.ForceFirstOutput.bool"/>
+      </Property>
+      <Property name="LiveFrequency" id="6207.LiveFrequency" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="range" id="6207.LiveFrequency.range"/>
+      </Property>
+      <Property name="RequestSpecificArrays" id="6207.RequestSpecificArrays" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="6207.RequestSpecificArrays.bool"/>
+      </Property>
+      <Property name="RescaleToDataRange" id="6207.RescaleToDataRange" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="6207.RescaleToDataRange.bool"/>
+      </Property>
+      <Property name="RootDirectory" id="6207.RootDirectory" number_of_elements="1">
+        <Element index="0" value=""/>
+        <Domain name="directory" id="6207.RootDirectory.directory"/>
+      </Property>
+      <Property name="SaveDTable" id="6207.SaveDTable" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="6207.SaveDTable.bool"/>
+      </Property>
+      <Property name="TimeCompartmentSize" id="6207.TimeCompartmentSize" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="range" id="6207.TimeCompartmentSize.range"/>
+      </Property>
+      <Property name="TimeInputFilePattern" id="6207.TimeInputFilePattern" number_of_elements="1">
+        <Element index="0" value="infile_*.vti"/>
+      </Property>
+      <Property name="WriteStart" id="6207.WriteStart" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="range" id="6207.WriteStart.range"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="ViewLayout" id="6208" servers="20">
+      <Property name="PreviewMode" id="6208.PreviewMode" number_of_elements="2">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+      </Property>
+      <Property name="SeparatorColor" id="6208.SeparatorColor" number_of_elements="3">
+        <Element index="0" value="0.937"/>
+        <Element index="1" value="0.922"/>
+        <Element index="2" value="0.906"/>
+        <Domain name="range" id="6208.SeparatorColor.range"/>
+      </Property>
+      <Property name="SeparatorWidth" id="6208.SeparatorWidth" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="range" id="6208.SeparatorWidth.range"/>
+      </Property>
+      <Layout number_of_elements="1">
+        <Item direction="0" fraction="0.5" view="10873"/>
+      </Layout>
+    </Proxy>
+    <Proxy group="materials" type="MaterialLibrary" id="261" servers="21">
+      <Property name="LoadMaterials" id="261.LoadMaterials" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="10026" servers="16">
+      <Property name="Source" id="10026.Source" number_of_elements="1">
+        <Proxy value="10015"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="10747" servers="16">
+      <Property name="Source" id="10747.Source" number_of_elements="1">
+        <Proxy value="10736"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="10781" servers="16">
+      <Property name="Source" id="10781.Source" number_of_elements="1">
+        <Proxy value="10770"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="10815" servers="16">
+      <Property name="Source" id="10815.Source" number_of_elements="1">
+        <Proxy value="10804"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="8468" servers="16">
+      <Property name="Source" id="8468.Source" number_of_elements="1">
+        <Proxy value="8456"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="8604" servers="16">
+      <Property name="Source" id="8604.Source" number_of_elements="1">
+        <Proxy value="8593"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="8635" servers="16">
+      <Property name="Source" id="8635.Source" number_of_elements="1">
+        <Proxy value="8624"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="9551" servers="16">
+      <Property name="Source" id="9551.Source" number_of_elements="1">
+        <Proxy value="9540"/>
+      </Property>
+    </Proxy>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="9816" servers="16">
+      <Property name="Source" id="9816.Source" number_of_elements="1">
+        <Proxy value="9805"/>
+      </Property>
+    </Proxy>
+    <Proxy group="representations" type="XYBarChartRepresentation" id="10907" servers="21">
+      <Property name="AttributeType" id="10907.AttributeType" number_of_elements="1">
+        <Element index="0" value="6"/>
+        <Domain name="enum" id="10907.AttributeType.enum">
+          <Entry value="2" text="Field Data"/>
+          <Entry value="6" text="Row Data"/>
+        </Domain>
+      </Property>
+      <Property name="Color" id="10907.Color" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="10907.Color.range"/>
+      </Property>
+      <Property name="CompositeDataSetIndex" id="10907.CompositeDataSetIndex" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="tree" id="10907.CompositeDataSetIndex.tree"/>
+      </Property>
+      <Property name="Input" id="10907.Input" number_of_elements="1">
+        <Proxy value="10736" output_port="0"/>
+        <Domain name="input_type" id="10907.Input.input_type"/>
+      </Property>
+      <Property name="SeriesColor" id="10907.SeriesColor" number_of_elements="8">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Element index="3" value="0"/>
+        <Element index="4" value="bin_values"/>
+        <Element index="5" value="0"/>
+        <Element index="6" value="0.666667"/>
+        <Element index="7" value="0"/>
+        <Domain name="array_list" id="10907.SeriesColor.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabel" id="10907.SeriesLabel" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="bin_extents"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="RGB_T_02"/>
+        <Domain name="array_list" id="10907.SeriesLabel.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabelPrefix" id="10907.SeriesLabelPrefix" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="SeriesPlotCorner" id="10907.SeriesPlotCorner" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="0"/>
+        <Domain name="array_list" id="10907.SeriesPlotCorner.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesVisibility" id="10907.SeriesVisibility" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="1"/>
+        <Domain name="array_list" id="10907.SeriesVisibility.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="UseIndexForXAxis" id="10907.UseIndexForXAxis" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10907.UseIndexForXAxis.bool"/>
+      </Property>
+      <Property name="Visibility" id="10907.Visibility" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10907.Visibility.bool"/>
+      </Property>
+      <Property name="XArrayName" id="10907.XArrayName" number_of_elements="1">
+        <Element index="0" value="bin_extents"/>
+        <Domain name="array_list" id="10907.XArrayName.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+    </Proxy>
+    <Proxy group="representations" type="XYBarChartRepresentation" id="10929" servers="21">
+      <Property name="AttributeType" id="10929.AttributeType" number_of_elements="1">
+        <Element index="0" value="6"/>
+        <Domain name="enum" id="10929.AttributeType.enum">
+          <Entry value="2" text="Field Data"/>
+          <Entry value="6" text="Row Data"/>
+        </Domain>
+      </Property>
+      <Property name="Color" id="10929.Color" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="10929.Color.range"/>
+      </Property>
+      <Property name="CompositeDataSetIndex" id="10929.CompositeDataSetIndex" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="tree" id="10929.CompositeDataSetIndex.tree"/>
+      </Property>
+      <Property name="Input" id="10929.Input" number_of_elements="1">
+        <Proxy value="10770" output_port="0"/>
+        <Domain name="input_type" id="10929.Input.input_type"/>
+      </Property>
+      <Property name="SeriesColor" id="10929.SeriesColor" number_of_elements="8">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Element index="3" value="0"/>
+        <Element index="4" value="bin_values"/>
+        <Element index="5" value="0"/>
+        <Element index="6" value="0"/>
+        <Element index="7" value="1"/>
+        <Domain name="array_list" id="10929.SeriesColor.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabel" id="10929.SeriesLabel" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="bin_extents"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="B_04"/>
+        <Domain name="array_list" id="10929.SeriesLabel.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabelPrefix" id="10929.SeriesLabelPrefix" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="SeriesPlotCorner" id="10929.SeriesPlotCorner" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="0"/>
+        <Domain name="array_list" id="10929.SeriesPlotCorner.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesVisibility" id="10929.SeriesVisibility" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="1"/>
+        <Domain name="array_list" id="10929.SeriesVisibility.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="UseIndexForXAxis" id="10929.UseIndexForXAxis" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10929.UseIndexForXAxis.bool"/>
+      </Property>
+      <Property name="Visibility" id="10929.Visibility" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10929.Visibility.bool"/>
+      </Property>
+      <Property name="XArrayName" id="10929.XArrayName" number_of_elements="1">
+        <Element index="0" value="bin_extents"/>
+        <Domain name="array_list" id="10929.XArrayName.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+    </Proxy>
+    <Proxy group="representations" type="XYBarChartRepresentation" id="10951" servers="21">
+      <Property name="AttributeType" id="10951.AttributeType" number_of_elements="1">
+        <Element index="0" value="6"/>
+        <Domain name="enum" id="10951.AttributeType.enum">
+          <Entry value="2" text="Field Data"/>
+          <Entry value="6" text="Row Data"/>
+        </Domain>
+      </Property>
+      <Property name="Color" id="10951.Color" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="10951.Color.range"/>
+      </Property>
+      <Property name="CompositeDataSetIndex" id="10951.CompositeDataSetIndex" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="tree" id="10951.CompositeDataSetIndex.tree"/>
+      </Property>
+      <Property name="Input" id="10951.Input" number_of_elements="1">
+        <Proxy value="10804" output_port="0"/>
+        <Domain name="input_type" id="10951.Input.input_type"/>
+      </Property>
+      <Property name="SeriesColor" id="10951.SeriesColor" number_of_elements="8">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Element index="3" value="0"/>
+        <Element index="4" value="bin_values"/>
+        <Element index="5" value="0.889998"/>
+        <Element index="6" value="0.100008"/>
+        <Element index="7" value="0.110002"/>
+        <Domain name="array_list" id="10951.SeriesColor.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabel" id="10951.SeriesLabel" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="bin_extents"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="inital"/>
+        <Domain name="array_list" id="10951.SeriesLabel.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesLabelPrefix" id="10951.SeriesLabelPrefix" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="SeriesPlotCorner" id="10951.SeriesPlotCorner" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="0"/>
+        <Domain name="array_list" id="10951.SeriesPlotCorner.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="SeriesVisibility" id="10951.SeriesVisibility" number_of_elements="4">
+        <Element index="0" value="bin_extents"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="bin_values"/>
+        <Element index="3" value="1"/>
+        <Domain name="array_list" id="10951.SeriesVisibility.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+      <Property name="UseIndexForXAxis" id="10951.UseIndexForXAxis" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10951.UseIndexForXAxis.bool"/>
+      </Property>
+      <Property name="Visibility" id="10951.Visibility" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10951.Visibility.bool"/>
+      </Property>
+      <Property name="XArrayName" id="10951.XArrayName" number_of_elements="1">
+        <Element index="0" value="bin_extents"/>
+        <Domain name="array_list" id="10951.XArrayName.array_list">
+          <String text="bin_extents"/>
+          <String text="bin_values"/>
+        </Domain>
+      </Property>
+    </Proxy>
+    <Proxy group="settings" type="ColorPalette" id="267" servers="16">
+      <Property name="BackgroundColor" id="267.BackgroundColor" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="1"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="267.BackgroundColor.range"/>
+      </Property>
+      <Property name="BackgroundColor2" id="267.BackgroundColor2" number_of_elements="3">
+        <Element index="0" value="0.32"/>
+        <Element index="1" value="0.34"/>
+        <Element index="2" value="0.43"/>
+        <Domain name="range" id="267.BackgroundColor2.range"/>
+      </Property>
+      <Property name="EdgeColor" id="267.EdgeColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="267.EdgeColor.range"/>
+      </Property>
+      <Property name="ForegroundColor" id="267.ForegroundColor" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="1"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="267.ForegroundColor.range"/>
+      </Property>
+      <Property name="InteractiveSelectionColor" id="267.InteractiveSelectionColor" number_of_elements="3">
+        <Element index="0" value="0.5"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="267.InteractiveSelectionColor.range"/>
+      </Property>
+      <Property name="InteractiveWidgetColor" id="267.InteractiveWidgetColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="1"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="267.InteractiveWidgetColor.range"/>
+      </Property>
+      <Property name="LoadPalette" id="267.LoadPalette"/>
+      <Property name="SelectionColor" id="267.SelectionColor" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="267.SelectionColor.range"/>
+      </Property>
+      <Property name="SurfaceColor" id="267.SurfaceColor" number_of_elements="3">
+        <Element index="0" value="1"/>
+        <Element index="1" value="1"/>
+        <Element index="2" value="1"/>
+        <Domain name="range" id="267.SurfaceColor.range"/>
+      </Property>
+      <Property name="TextAnnotationColor" id="267.TextAnnotationColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="267.TextAnnotationColor.range"/>
+      </Property>
+      <Property name="UseGradientBackground" id="267.UseGradientBackground" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="267.UseGradientBackground.bool"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_mesh_quality_v2" id="9540" servers="1">
+      <Property name="in" id="9540.in" number_of_elements="1">
+        <Proxy value="8456" output_port="0"/>
+        <Domain name="groups" id="9540.in.groups"/>
+        <Domain name="input_type" id="9540.in.input_type"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_mesh_quality_v2" id="9805" servers="1">
+      <Property name="in" id="9805.in" number_of_elements="1">
+        <Proxy value="8593" output_port="0"/>
+        <Domain name="groups" id="9805.in.groups"/>
+        <Domain name="input_type" id="9805.in.input_type"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_mesh_quality_v2" id="10015" servers="1">
+      <Property name="in" id="10015.in" number_of_elements="1">
+        <Proxy value="8624" output_port="0"/>
+        <Domain name="groups" id="10015.in.groups"/>
+        <Domain name="input_type" id="10015.in.input_type"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_rel_histogram" id="10736" servers="1">
+      <Property name="Bin Count" id="10736.Bin Count" number_of_elements="1">
+        <Element index="0" value="11"/>
+        <Domain name="range" id="10736.Bin Count.range"/>
+      </Property>
+      <Property name="Calculate Averages" id="10736.Calculate Averages" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10736.Calculate Averages.bool"/>
+      </Property>
+      <Property name="Center Bins Around Min And Max" id="10736.Center Bins Around Min And Max" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10736.Center Bins Around Min And Max.bool"/>
+      </Property>
+      <Property name="Component" id="10736.Component" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="comps" id="10736.Component.comps">
+          <Entry value="0" text=""/>
+        </Domain>
+      </Property>
+      <Property name="Custom Bin Ranges" id="10736.Custom Bin Ranges" number_of_elements="2">
+        <Element index="0" value="0"/>
+        <Element index="1" value="1"/>
+        <Domain name="scalar_range" id="10736.Custom Bin Ranges.scalar_range"/>
+      </Property>
+      <Property name="Input" id="10736.Input" number_of_elements="1">
+        <Proxy value="9540" output_port="0"/>
+        <Domain name="groups" id="10736.Input.groups"/>
+        <Domain name="input_array" id="10736.Input.input_array"/>
+        <Domain name="input_type" id="10736.Input.input_type"/>
+      </Property>
+      <Property name="Select Input Array" id="10736.Select Input Array" number_of_elements="5">
+        <Element index="0" value=""/>
+        <Element index="1" value=""/>
+        <Element index="2" value=""/>
+        <Element index="3" value="1"/>
+        <Element index="4" value="Quality_Shape_5"/>
+        <Domain name="array_list" id="10736.Select Input Array.array_list">
+          <String text="Quality_Aspect Beta_14"/>
+          <String text="Quality_Aspect Frobenius_13"/>
+          <String text="Quality_Aspect Gamma_15"/>
+          <String text="Quality_Aspect Ratio_2"/>
+          <String text="Quality_Collapse Ratio_12"/>
+          <String text="Quality_Condition_11"/>
+          <String text="Quality_Distortian_10"/>
+          <String text="Quality_Edge Ratio_1"/>
+          <String text="Quality_Jacobian_9"/>
+          <String text="Quality_Minimum Dihedral Angle_8"/>
+          <String text="Quality_Radius Ratio_0"/>
+          <String text="Quality_Relative Size Squared_7"/>
+          <String text="Quality_Scaled Jacobian_6"/>
+          <String text="Quality_Shape and Size_3"/>
+          <String text="Quality_Shape_5"/>
+          <String text="Quality_Volume_4"/>
+        </Domain>
+      </Property>
+      <Property name="Use Custom Bin Ranges" id="10736.Use Custom Bin Ranges" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10736.Use Custom Bin Ranges.bool"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_rel_histogram" id="10770" servers="1">
+      <Property name="Bin Count" id="10770.Bin Count" number_of_elements="1">
+        <Element index="0" value="11"/>
+        <Domain name="range" id="10770.Bin Count.range"/>
+      </Property>
+      <Property name="Calculate Averages" id="10770.Calculate Averages" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10770.Calculate Averages.bool"/>
+      </Property>
+      <Property name="Center Bins Around Min And Max" id="10770.Center Bins Around Min And Max" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10770.Center Bins Around Min And Max.bool"/>
+      </Property>
+      <Property name="Component" id="10770.Component" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="comps" id="10770.Component.comps">
+          <Entry value="0" text=""/>
+        </Domain>
+      </Property>
+      <Property name="Custom Bin Ranges" id="10770.Custom Bin Ranges" number_of_elements="2">
+        <Element index="0" value="0"/>
+        <Element index="1" value="1"/>
+        <Domain name="scalar_range" id="10770.Custom Bin Ranges.scalar_range"/>
+      </Property>
+      <Property name="Input" id="10770.Input" number_of_elements="1">
+        <Proxy value="9805" output_port="0"/>
+        <Domain name="groups" id="10770.Input.groups"/>
+        <Domain name="input_array" id="10770.Input.input_array"/>
+        <Domain name="input_type" id="10770.Input.input_type"/>
+      </Property>
+      <Property name="Select Input Array" id="10770.Select Input Array" number_of_elements="5">
+        <Element index="0" value=""/>
+        <Element index="1" value=""/>
+        <Element index="2" value=""/>
+        <Element index="3" value="1"/>
+        <Element index="4" value="Quality_Shape_5"/>
+        <Domain name="array_list" id="10770.Select Input Array.array_list">
+          <String text="Quality_Aspect Beta_14"/>
+          <String text="Quality_Aspect Frobenius_13"/>
+          <String text="Quality_Aspect Gamma_15"/>
+          <String text="Quality_Aspect Ratio_2"/>
+          <String text="Quality_Collapse Ratio_12"/>
+          <String text="Quality_Condition_11"/>
+          <String text="Quality_Distortian_10"/>
+          <String text="Quality_Edge Ratio_1"/>
+          <String text="Quality_Jacobian_9"/>
+          <String text="Quality_Minimum Dihedral Angle_8"/>
+          <String text="Quality_Radius Ratio_0"/>
+          <String text="Quality_Relative Size Squared_7"/>
+          <String text="Quality_Scaled Jacobian_6"/>
+          <String text="Quality_Shape and Size_3"/>
+          <String text="Quality_Shape_5"/>
+          <String text="Quality_Volume_4"/>
+        </Domain>
+      </Property>
+      <Property name="Use Custom Bin Ranges" id="10770.Use Custom Bin Ranges" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10770.Use Custom Bin Ranges.bool"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="my_rel_histogram" id="10804" servers="1">
+      <Property name="Bin Count" id="10804.Bin Count" number_of_elements="1">
+        <Element index="0" value="11"/>
+        <Domain name="range" id="10804.Bin Count.range"/>
+      </Property>
+      <Property name="Calculate Averages" id="10804.Calculate Averages" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10804.Calculate Averages.bool"/>
+      </Property>
+      <Property name="Center Bins Around Min And Max" id="10804.Center Bins Around Min And Max" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10804.Center Bins Around Min And Max.bool"/>
+      </Property>
+      <Property name="Component" id="10804.Component" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="comps" id="10804.Component.comps">
+          <Entry value="0" text=""/>
+        </Domain>
+      </Property>
+      <Property name="Custom Bin Ranges" id="10804.Custom Bin Ranges" number_of_elements="2">
+        <Element index="0" value="0"/>
+        <Element index="1" value="1"/>
+        <Domain name="scalar_range" id="10804.Custom Bin Ranges.scalar_range"/>
+      </Property>
+      <Property name="Input" id="10804.Input" number_of_elements="1">
+        <Proxy value="10015" output_port="0"/>
+        <Domain name="groups" id="10804.Input.groups"/>
+        <Domain name="input_array" id="10804.Input.input_array"/>
+        <Domain name="input_type" id="10804.Input.input_type"/>
+      </Property>
+      <Property name="Select Input Array" id="10804.Select Input Array" number_of_elements="5">
+        <Element index="0" value=""/>
+        <Element index="1" value=""/>
+        <Element index="2" value=""/>
+        <Element index="3" value="1"/>
+        <Element index="4" value="Quality_Shape_5"/>
+        <Domain name="array_list" id="10804.Select Input Array.array_list">
+          <String text="Quality_Aspect Beta_14"/>
+          <String text="Quality_Aspect Frobenius_13"/>
+          <String text="Quality_Aspect Gamma_15"/>
+          <String text="Quality_Aspect Ratio_2"/>
+          <String text="Quality_Collapse Ratio_12"/>
+          <String text="Quality_Condition_11"/>
+          <String text="Quality_Distortian_10"/>
+          <String text="Quality_Edge Ratio_1"/>
+          <String text="Quality_Jacobian_9"/>
+          <String text="Quality_Minimum Dihedral Angle_8"/>
+          <String text="Quality_Radius Ratio_0"/>
+          <String text="Quality_Relative Size Squared_7"/>
+          <String text="Quality_Scaled Jacobian_6"/>
+          <String text="Quality_Shape and Size_3"/>
+          <String text="Quality_Shape_5"/>
+          <String text="Quality_Volume_4"/>
+        </Domain>
+      </Property>
+      <Property name="Use Custom Bin Ranges" id="10804.Use Custom Bin Ranges" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10804.Use Custom Bin Ranges.bool"/>
+      </Property>
+    </Proxy>
+    <Proxy group="sources" type="LegacyVTKFileReader" id="8624" servers="1">
+      <Property name="FileNameInfo" id="8624.FileNameInfo" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam.vtk"/>
+      </Property>
+      <Property name="FileNames" id="8624.FileNames" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam.vtk"/>
+        <Domain name="files" id="8624.FileNames.files"/>
+      </Property>
+      <Property name="TimestepValues" id="8624.TimestepValues"/>
+    </Proxy>
+    <Proxy group="sources" type="LegacyVTKFileReader" id="8593" servers="1">
+      <Property name="FileNameInfo" id="8593.FileNameInfo" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam_B_04.vtk"/>
+      </Property>
+      <Property name="FileNames" id="8593.FileNames" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam_B_04.vtk"/>
+        <Domain name="files" id="8593.FileNames.files"/>
+      </Property>
+      <Property name="TimestepValues" id="8593.TimestepValues"/>
+    </Proxy>
+    <Proxy group="sources" type="LegacyVTKFileReader" id="8456" servers="1">
+      <Property name="FileNameInfo" id="8456.FileNameInfo" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam_RGB_T_02.vtk"/>
+      </Property>
+      <Property name="FileNames" id="8456.FileNames" number_of_elements="1">
+        <Element index="0" value="C:\Users\jonas\OneDrive - bwedu\01WS\Bachelorarbeit\refineRGB\examples\example02_cantilever\sample07_cantilever_beam_RGB_T_02.vtk"/>
+        <Domain name="files" id="8456.FileNames.files"/>
+      </Property>
+      <Property name="TimestepValues" id="8456.TimestepValues"/>
+    </Proxy>
+    <Proxy group="misc" type="TimeKeeper" id="256" servers="16">
+      <Property name="SuppressedTimeSources" id="256.SuppressedTimeSources"/>
+      <Property name="Time" id="256.Time" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="range" id="256.Time.range"/>
+      </Property>
+      <Property name="TimeLabel" id="256.TimeLabel" number_of_elements="1">
+        <Element index="0" value="Time"/>
+      </Property>
+      <Property name="TimeRange" id="256.TimeRange" number_of_elements="2">
+        <Element index="0" value="0"/>
+        <Element index="1" value="1"/>
+      </Property>
+      <Property name="TimeSources" id="256.TimeSources" number_of_elements="9">
+        <Proxy value="8456"/>
+        <Proxy value="8593"/>
+        <Proxy value="8624"/>
+        <Proxy value="9540"/>
+        <Proxy value="9805"/>
+        <Proxy value="10015"/>
+        <Proxy value="10736"/>
+        <Proxy value="10770"/>
+        <Proxy value="10804"/>
+      </Property>
+      <Property name="TimestepValues" id="256.TimestepValues"/>
+      <Property name="Views" id="256.Views" number_of_elements="1">
+        <Proxy value="10873"/>
+      </Property>
+    </Proxy>
+    <Proxy group="views" type="XYBarChartView" id="10873" servers="21">
+      <Property name="BottomAxisColor" id="10873.BottomAxisColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.BottomAxisColor.range"/>
+      </Property>
+      <Property name="BottomAxisGridColor" id="10873.BottomAxisGridColor" number_of_elements="3">
+        <Element index="0" value="0.95"/>
+        <Element index="1" value="0.95"/>
+        <Element index="2" value="0.95"/>
+        <Domain name="range" id="10873.BottomAxisGridColor.range"/>
+      </Property>
+      <Property name="BottomAxisLabelBold" id="10873.BottomAxisLabelBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisLabelBold.bool"/>
+      </Property>
+      <Property name="BottomAxisLabelColor" id="10873.BottomAxisLabelColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.BottomAxisLabelColor.range"/>
+      </Property>
+      <Property name="BottomAxisLabelFontFamily" id="10873.BottomAxisLabelFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.BottomAxisLabelFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="BottomAxisLabelFontFile" id="10873.BottomAxisLabelFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="BottomAxisLabelFontSize" id="10873.BottomAxisLabelFontSize" number_of_elements="1">
+        <Element index="0" value="12"/>
+      </Property>
+      <Property name="BottomAxisLabelItalic" id="10873.BottomAxisLabelItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisLabelItalic.bool"/>
+      </Property>
+      <Property name="BottomAxisLabelNotation" id="10873.BottomAxisLabelNotation" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="10873.BottomAxisLabelNotation.enum">
+          <Entry value="0" text="Mixed"/>
+          <Entry value="1" text="Scientific"/>
+          <Entry value="2" text="Fixed"/>
+        </Domain>
+      </Property>
+      <Property name="BottomAxisLabelPrecision" id="10873.BottomAxisLabelPrecision" number_of_elements="1">
+        <Element index="0" value="2"/>
+        <Domain name="range" id="10873.BottomAxisLabelPrecision.range"/>
+      </Property>
+      <Property name="BottomAxisLabels" id="10873.BottomAxisLabels">
+        <Domain name="scalar_range" id="10873.BottomAxisLabels.scalar_range"/>
+      </Property>
+      <Property name="BottomAxisLogScale" id="10873.BottomAxisLogScale" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisLogScale.bool"/>
+      </Property>
+      <Property name="BottomAxisRangeMaximum" id="10873.BottomAxisRangeMaximum" number_of_elements="1">
+        <Element index="0" value="1.05"/>
+      </Property>
+      <Property name="BottomAxisRangeMinimum" id="10873.BottomAxisRangeMinimum" number_of_elements="1">
+        <Element index="0" value="-0.05"/>
+      </Property>
+      <Property name="BottomAxisTitle" id="10873.BottomAxisTitle" number_of_elements="1">
+        <Element index="0" value="Shape Measure"/>
+      </Property>
+      <Property name="BottomAxisTitleBold" id="10873.BottomAxisTitleBold" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.BottomAxisTitleBold.bool"/>
+      </Property>
+      <Property name="BottomAxisTitleColor" id="10873.BottomAxisTitleColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.BottomAxisTitleColor.range"/>
+      </Property>
+      <Property name="BottomAxisTitleFontFamily" id="10873.BottomAxisTitleFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.BottomAxisTitleFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="BottomAxisTitleFontFile" id="10873.BottomAxisTitleFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="BottomAxisTitleFontSize" id="10873.BottomAxisTitleFontSize" number_of_elements="1">
+        <Element index="0" value="18"/>
+      </Property>
+      <Property name="BottomAxisTitleItalic" id="10873.BottomAxisTitleItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisTitleItalic.bool"/>
+      </Property>
+      <Property name="BottomAxisUseCustomLabels" id="10873.BottomAxisUseCustomLabels" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisUseCustomLabels.bool"/>
+      </Property>
+      <Property name="BottomAxisUseCustomRange" id="10873.BottomAxisUseCustomRange" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.BottomAxisUseCustomRange.bool"/>
+      </Property>
+      <Property name="CacheKey" id="10873.CacheKey" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="range" id="10873.CacheKey.range"/>
+      </Property>
+      <Property name="ChartTitle" id="10873.ChartTitle" number_of_elements="1">
+        <Element index="0" value="Netzqualität"/>
+      </Property>
+      <Property name="ChartTitleAlignment" id="10873.ChartTitleAlignment" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="enum" id="10873.ChartTitleAlignment.enum">
+          <Entry value="0" text="Left"/>
+          <Entry value="1" text="Center"/>
+          <Entry value="2" text="Right"/>
+        </Domain>
+      </Property>
+      <Property name="ChartTitleBold" id="10873.ChartTitleBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.ChartTitleBold.bool"/>
+      </Property>
+      <Property name="ChartTitleColor" id="10873.ChartTitleColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.ChartTitleColor.range"/>
+      </Property>
+      <Property name="ChartTitleFontFamily" id="10873.ChartTitleFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.ChartTitleFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="ChartTitleFontFile" id="10873.ChartTitleFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="ChartTitleFontSize" id="10873.ChartTitleFontSize" number_of_elements="1">
+        <Element index="0" value="18"/>
+      </Property>
+      <Property name="ChartTitleItalic" id="10873.ChartTitleItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.ChartTitleItalic.bool"/>
+      </Property>
+      <Property name="HideTimeMarker" id="10873.HideTimeMarker" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.HideTimeMarker.bool"/>
+      </Property>
+      <Property name="LeftAxisColor" id="10873.LeftAxisColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.LeftAxisColor.range"/>
+      </Property>
+      <Property name="LeftAxisGridColor" id="10873.LeftAxisGridColor" number_of_elements="3">
+        <Element index="0" value="0.95"/>
+        <Element index="1" value="0.95"/>
+        <Element index="2" value="0.95"/>
+        <Domain name="range" id="10873.LeftAxisGridColor.range"/>
+      </Property>
+      <Property name="LeftAxisLabelBold" id="10873.LeftAxisLabelBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisLabelBold.bool"/>
+      </Property>
+      <Property name="LeftAxisLabelColor" id="10873.LeftAxisLabelColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.LeftAxisLabelColor.range"/>
+      </Property>
+      <Property name="LeftAxisLabelFontFamily" id="10873.LeftAxisLabelFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.LeftAxisLabelFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="LeftAxisLabelFontFile" id="10873.LeftAxisLabelFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="LeftAxisLabelFontSize" id="10873.LeftAxisLabelFontSize" number_of_elements="1">
+        <Element index="0" value="12"/>
+      </Property>
+      <Property name="LeftAxisLabelItalic" id="10873.LeftAxisLabelItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisLabelItalic.bool"/>
+      </Property>
+      <Property name="LeftAxisLabelNotation" id="10873.LeftAxisLabelNotation" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="10873.LeftAxisLabelNotation.enum">
+          <Entry value="0" text="Mixed"/>
+          <Entry value="1" text="Scientific"/>
+          <Entry value="2" text="Fixed"/>
+        </Domain>
+      </Property>
+      <Property name="LeftAxisLabelPrecision" id="10873.LeftAxisLabelPrecision" number_of_elements="1">
+        <Element index="0" value="2"/>
+        <Domain name="range" id="10873.LeftAxisLabelPrecision.range"/>
+      </Property>
+      <Property name="LeftAxisLabels" id="10873.LeftAxisLabels"/>
+      <Property name="LeftAxisLogScale" id="10873.LeftAxisLogScale" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisLogScale.bool"/>
+      </Property>
+      <Property name="LeftAxisRangeMaximum" id="10873.LeftAxisRangeMaximum" number_of_elements="1">
+        <Element index="0" value="0.46"/>
+      </Property>
+      <Property name="LeftAxisRangeMinimum" id="10873.LeftAxisRangeMinimum" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="LeftAxisTitle" id="10873.LeftAxisTitle" number_of_elements="1">
+        <Element index="0" value="relative Häufigkeit"/>
+      </Property>
+      <Property name="LeftAxisTitleBold" id="10873.LeftAxisTitleBold" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.LeftAxisTitleBold.bool"/>
+      </Property>
+      <Property name="LeftAxisTitleColor" id="10873.LeftAxisTitleColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.LeftAxisTitleColor.range"/>
+      </Property>
+      <Property name="LeftAxisTitleFontFamily" id="10873.LeftAxisTitleFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.LeftAxisTitleFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="LeftAxisTitleFontFile" id="10873.LeftAxisTitleFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="LeftAxisTitleFontSize" id="10873.LeftAxisTitleFontSize" number_of_elements="1">
+        <Element index="0" value="18"/>
+      </Property>
+      <Property name="LeftAxisTitleItalic" id="10873.LeftAxisTitleItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisTitleItalic.bool"/>
+      </Property>
+      <Property name="LeftAxisUseCustomLabels" id="10873.LeftAxisUseCustomLabels" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisUseCustomLabels.bool"/>
+      </Property>
+      <Property name="LeftAxisUseCustomRange" id="10873.LeftAxisUseCustomRange" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LeftAxisUseCustomRange.bool"/>
+      </Property>
+      <Property name="LegendBold" id="10873.LegendBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LegendBold.bool"/>
+      </Property>
+      <Property name="LegendFontFamily" id="10873.LegendFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.LegendFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="LegendFontFile" id="10873.LegendFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="LegendFontSize" id="10873.LegendFontSize" number_of_elements="1">
+        <Element index="0" value="12"/>
+      </Property>
+      <Property name="LegendItalic" id="10873.LegendItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.LegendItalic.bool"/>
+      </Property>
+      <Property name="LegendLocation" id="10873.LegendLocation" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="enum" id="10873.LegendLocation.enum">
+          <Entry value="0" text="TopLeft"/>
+          <Entry value="1" text="TopRight"/>
+          <Entry value="2" text="BottomRight"/>
+          <Entry value="3" text="BottomLeft"/>
+          <Entry value="4" text="Left"/>
+          <Entry value="5" text="Top"/>
+          <Entry value="6" text="Right"/>
+          <Entry value="7" text="Bottom"/>
+          <Entry value="8" text="Custom"/>
+        </Domain>
+      </Property>
+      <Property name="LegendPosition" id="10873.LegendPosition" number_of_elements="2">
+        <Element index="0" value="1400"/>
+        <Element index="1" value="716"/>
+      </Property>
+      <Property name="LegendSymbolWidth" id="10873.LegendSymbolWidth" number_of_elements="1">
+        <Element index="0" value="25"/>
+      </Property>
+      <Property name="PPI" id="10873.PPI" number_of_elements="1">
+        <Element index="0" value="96"/>
+      </Property>
+      <Property name="Representations" id="10873.Representations" number_of_elements="3">
+        <Proxy value="10907"/>
+        <Proxy value="10929"/>
+        <Proxy value="10951"/>
+      </Property>
+      <Property name="RightAxisColor" id="10873.RightAxisColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.RightAxisColor.range"/>
+      </Property>
+      <Property name="RightAxisGridColor" id="10873.RightAxisGridColor" number_of_elements="3">
+        <Element index="0" value="0.95"/>
+        <Element index="1" value="0.95"/>
+        <Element index="2" value="0.95"/>
+        <Domain name="range" id="10873.RightAxisGridColor.range"/>
+      </Property>
+      <Property name="RightAxisLabelBold" id="10873.RightAxisLabelBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisLabelBold.bool"/>
+      </Property>
+      <Property name="RightAxisLabelColor" id="10873.RightAxisLabelColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.RightAxisLabelColor.range"/>
+      </Property>
+      <Property name="RightAxisLabelFontFamily" id="10873.RightAxisLabelFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.RightAxisLabelFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="RightAxisLabelFontFile" id="10873.RightAxisLabelFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="RightAxisLabelFontSize" id="10873.RightAxisLabelFontSize" number_of_elements="1">
+        <Element index="0" value="12"/>
+      </Property>
+      <Property name="RightAxisLabelItalic" id="10873.RightAxisLabelItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisLabelItalic.bool"/>
+      </Property>
+      <Property name="RightAxisLabelNotation" id="10873.RightAxisLabelNotation" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="10873.RightAxisLabelNotation.enum">
+          <Entry value="0" text="Mixed"/>
+          <Entry value="1" text="Scientific"/>
+          <Entry value="2" text="Fixed"/>
+        </Domain>
+      </Property>
+      <Property name="RightAxisLabelPrecision" id="10873.RightAxisLabelPrecision" number_of_elements="1">
+        <Element index="0" value="2"/>
+        <Domain name="range" id="10873.RightAxisLabelPrecision.range"/>
+      </Property>
+      <Property name="RightAxisLabels" id="10873.RightAxisLabels">
+        <Domain name="scalar_range" id="10873.RightAxisLabels.scalar_range"/>
+      </Property>
+      <Property name="RightAxisLogScale" id="10873.RightAxisLogScale" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisLogScale.bool"/>
+      </Property>
+      <Property name="RightAxisRangeMaximum" id="10873.RightAxisRangeMaximum" number_of_elements="1">
+        <Element index="0" value="6.66"/>
+      </Property>
+      <Property name="RightAxisRangeMinimum" id="10873.RightAxisRangeMinimum" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="RightAxisTitle" id="10873.RightAxisTitle" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="RightAxisTitleBold" id="10873.RightAxisTitleBold" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.RightAxisTitleBold.bool"/>
+      </Property>
+      <Property name="RightAxisTitleColor" id="10873.RightAxisTitleColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.RightAxisTitleColor.range"/>
+      </Property>
+      <Property name="RightAxisTitleFontFamily" id="10873.RightAxisTitleFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.RightAxisTitleFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="RightAxisTitleFontFile" id="10873.RightAxisTitleFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="RightAxisTitleFontSize" id="10873.RightAxisTitleFontSize" number_of_elements="1">
+        <Element index="0" value="18"/>
+      </Property>
+      <Property name="RightAxisTitleItalic" id="10873.RightAxisTitleItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisTitleItalic.bool"/>
+      </Property>
+      <Property name="RightAxisUseCustomLabels" id="10873.RightAxisUseCustomLabels" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisUseCustomLabels.bool"/>
+      </Property>
+      <Property name="RightAxisUseCustomRange" id="10873.RightAxisUseCustomRange" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.RightAxisUseCustomRange.bool"/>
+      </Property>
+      <Property name="ShowBottomAxisGrid" id="10873.ShowBottomAxisGrid" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowBottomAxisGrid.bool"/>
+      </Property>
+      <Property name="ShowBottomAxisLabels" id="10873.ShowBottomAxisLabels" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowBottomAxisLabels.bool"/>
+      </Property>
+      <Property name="ShowLeftAxisGrid" id="10873.ShowLeftAxisGrid" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowLeftAxisGrid.bool"/>
+      </Property>
+      <Property name="ShowLeftAxisLabels" id="10873.ShowLeftAxisLabels" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowLeftAxisLabels.bool"/>
+      </Property>
+      <Property name="ShowLegend" id="10873.ShowLegend" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowLegend.bool"/>
+      </Property>
+      <Property name="ShowRightAxisGrid" id="10873.ShowRightAxisGrid" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowRightAxisGrid.bool"/>
+      </Property>
+      <Property name="ShowRightAxisLabels" id="10873.ShowRightAxisLabels" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowRightAxisLabels.bool"/>
+      </Property>
+      <Property name="ShowTopAxisGrid" id="10873.ShowTopAxisGrid" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowTopAxisGrid.bool"/>
+      </Property>
+      <Property name="ShowTopAxisLabels" id="10873.ShowTopAxisLabels" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.ShowTopAxisLabels.bool"/>
+      </Property>
+      <Property name="SortByXAxis" id="10873.SortByXAxis" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.SortByXAxis.bool"/>
+      </Property>
+      <Property name="TooltipNotation" id="10873.TooltipNotation" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="10873.TooltipNotation.enum">
+          <Entry value="0" text="Mixed"/>
+          <Entry value="1" text="Scientific"/>
+          <Entry value="2" text="Fixed"/>
+        </Domain>
+      </Property>
+      <Property name="TooltipPrecision" id="10873.TooltipPrecision" number_of_elements="1">
+        <Element index="0" value="6"/>
+        <Domain name="range" id="10873.TooltipPrecision.range"/>
+      </Property>
+      <Property name="TopAxisColor" id="10873.TopAxisColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.TopAxisColor.range"/>
+      </Property>
+      <Property name="TopAxisGridColor" id="10873.TopAxisGridColor" number_of_elements="3">
+        <Element index="0" value="0.95"/>
+        <Element index="1" value="0.95"/>
+        <Element index="2" value="0.95"/>
+        <Domain name="range" id="10873.TopAxisGridColor.range"/>
+      </Property>
+      <Property name="TopAxisLabelBold" id="10873.TopAxisLabelBold" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisLabelBold.bool"/>
+      </Property>
+      <Property name="TopAxisLabelColor" id="10873.TopAxisLabelColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.TopAxisLabelColor.range"/>
+      </Property>
+      <Property name="TopAxisLabelFontFamily" id="10873.TopAxisLabelFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.TopAxisLabelFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="TopAxisLabelFontFile" id="10873.TopAxisLabelFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="TopAxisLabelFontSize" id="10873.TopAxisLabelFontSize" number_of_elements="1">
+        <Element index="0" value="12"/>
+      </Property>
+      <Property name="TopAxisLabelItalic" id="10873.TopAxisLabelItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisLabelItalic.bool"/>
+      </Property>
+      <Property name="TopAxisLabelNotation" id="10873.TopAxisLabelNotation" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="enum" id="10873.TopAxisLabelNotation.enum">
+          <Entry value="0" text="Mixed"/>
+          <Entry value="1" text="Scientific"/>
+          <Entry value="2" text="Fixed"/>
+        </Domain>
+      </Property>
+      <Property name="TopAxisLabelPrecision" id="10873.TopAxisLabelPrecision" number_of_elements="1">
+        <Element index="0" value="2"/>
+        <Domain name="range" id="10873.TopAxisLabelPrecision.range"/>
+      </Property>
+      <Property name="TopAxisLabels" id="10873.TopAxisLabels">
+        <Domain name="scalar_range" id="10873.TopAxisLabels.scalar_range"/>
+      </Property>
+      <Property name="TopAxisLogScale" id="10873.TopAxisLogScale" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisLogScale.bool"/>
+      </Property>
+      <Property name="TopAxisRangeMaximum" id="10873.TopAxisRangeMaximum" number_of_elements="1">
+        <Element index="0" value="6.66"/>
+      </Property>
+      <Property name="TopAxisRangeMinimum" id="10873.TopAxisRangeMinimum" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+      <Property name="TopAxisTitle" id="10873.TopAxisTitle" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="TopAxisTitleBold" id="10873.TopAxisTitleBold" number_of_elements="1">
+        <Element index="0" value="1"/>
+        <Domain name="bool" id="10873.TopAxisTitleBold.bool"/>
+      </Property>
+      <Property name="TopAxisTitleColor" id="10873.TopAxisTitleColor" number_of_elements="3">
+        <Element index="0" value="0"/>
+        <Element index="1" value="0"/>
+        <Element index="2" value="0"/>
+        <Domain name="range" id="10873.TopAxisTitleColor.range"/>
+      </Property>
+      <Property name="TopAxisTitleFontFamily" id="10873.TopAxisTitleFontFamily" number_of_elements="1">
+        <Element index="0" value="Arial"/>
+        <Domain name="list" id="10873.TopAxisTitleFontFamily.list">
+          <String text="Arial"/>
+          <String text="Courier"/>
+          <String text="Times"/>
+          <String text="File"/>
+        </Domain>
+      </Property>
+      <Property name="TopAxisTitleFontFile" id="10873.TopAxisTitleFontFile" number_of_elements="1">
+        <Element index="0" value=""/>
+      </Property>
+      <Property name="TopAxisTitleFontSize" id="10873.TopAxisTitleFontSize" number_of_elements="1">
+        <Element index="0" value="18"/>
+      </Property>
+      <Property name="TopAxisTitleItalic" id="10873.TopAxisTitleItalic" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisTitleItalic.bool"/>
+      </Property>
+      <Property name="TopAxisUseCustomLabels" id="10873.TopAxisUseCustomLabels" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisUseCustomLabels.bool"/>
+      </Property>
+      <Property name="TopAxisUseCustomRange" id="10873.TopAxisUseCustomRange" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.TopAxisUseCustomRange.bool"/>
+      </Property>
+      <Property name="UseCache" id="10873.UseCache" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="bool" id="10873.UseCache.bool"/>
+      </Property>
+      <Property name="ViewSize" id="10873.ViewSize" number_of_elements="2">
+        <Element index="0" value="1510"/>
+        <Element index="1" value="795"/>
+      </Property>
+      <Property name="ViewTime" id="10873.ViewTime" number_of_elements="1">
+        <Element index="0" value="0"/>
+        <Domain name="range" id="10873.ViewTime.range"/>
+      </Property>
+    </Proxy>
+    <ProxyCollection name="animation">
+      <Item id="263" name="AnimationScene1"/>
+      <Item id="265" name="TimeAnimationCue1"/>
+    </ProxyCollection>
+    <ProxyCollection name="export_global">
+      <Item id="6207" name="catalyst"/>
+    </ProxyCollection>
+    <ProxyCollection name="layouts">
+      <Item id="6208" name="Layout #1"/>
+    </ProxyCollection>
+    <ProxyCollection name="materiallibrary">
+      <Item id="261" name="MaterialLibrary1"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.10015">
+      <Item id="10026" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.10736">
+      <Item id="10747" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.10770">
+      <Item id="10781" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.10804">
+      <Item id="10815" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.8456">
+      <Item id="8468" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.8593">
+      <Item id="8604" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.8624">
+      <Item id="8635" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.9540">
+      <Item id="9551" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="pq_helper_proxies.9805">
+      <Item id="9816" name="RepresentationAnimationHelper"/>
+    </ProxyCollection>
+    <ProxyCollection name="representations">
+      <Item id="10907" name="XYBarChartRepresentation1" logname="my_rel_histogram1(XYBarChartRepresentation)"/>
+      <Item id="10929" name="XYBarChartRepresentation2" logname="my_rel_histogram2(XYBarChartRepresentation)"/>
+      <Item id="10951" name="XYBarChartRepresentation3" logname="my_rel_histogram3(XYBarChartRepresentation)"/>
+    </ProxyCollection>
+    <ProxyCollection name="settings">
+      <Item id="267" name="ColorPalette"/>
+    </ProxyCollection>
+    <ProxyCollection name="sources">
+      <Item id="9540" name="my_mesh_quality_v21" logname="my_mesh_quality_v21"/>
+      <Item id="9805" name="my_mesh_quality_v22" logname="my_mesh_quality_v22"/>
+      <Item id="10015" name="my_mesh_quality_v23" logname="my_mesh_quality_v23"/>
+      <Item id="10736" name="my_rel_histogram1" logname="my_rel_histogram1"/>
+      <Item id="10770" name="my_rel_histogram2" logname="my_rel_histogram2"/>
+      <Item id="10804" name="my_rel_histogram3" logname="my_rel_histogram3"/>
+      <Item id="8624" name="sample07_cantilever_beam.vtk" logname="sample07_cantilever_beam.vtk"/>
+      <Item id="8593" name="sample07_cantilever_beam_B_04.vtk" logname="sample07_cantilever_beam_B_04.vtk"/>
+      <Item id="8456" name="sample07_cantilever_beam_RGB_T_02.vtk" logname="sample07_cantilever_beam_RGB_T_02.vtk"/>
+    </ProxyCollection>
+    <ProxyCollection name="timekeeper">
+      <Item id="256" name="TimeKeeper1"/>
+    </ProxyCollection>
+    <ProxyCollection name="views">
+      <Item id="10873" name="BarChartView1" logname="BarChartView1"/>
+    </ProxyCollection>
+    <CustomProxyDefinitions>
+      <CustomProxyDefinition name="my_mesh_quality_v2" group="filters">
+        <CompoundSourceProxy id="49233" servers="1">
+          <Proxy group="filters" type="MeshQuality" id="26722" servers="1" compound_name="Aspect Beta">
+            <Property name="HexQualityMeasure" id="26722.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26722.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26722.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26722.Input.groups"/>
+              <Domain name="input_type" id="26722.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26722.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26722.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26722.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="29"/>
+              <Domain name="enum" id="26722.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26722.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26722.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26699" servers="1" compound_name="Aspect Frobenius">
+            <Property name="HexQualityMeasure" id="26699.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26699.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26699.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26699.Input.groups"/>
+              <Domain name="input_type" id="26699.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26699.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26699.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26699.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="3"/>
+              <Domain name="enum" id="26699.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26699.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26699.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26734" servers="1" compound_name="Aspect Gamma">
+            <Property name="HexQualityMeasure" id="26734.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26734.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26734.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26734.Input.groups"/>
+              <Domain name="input_type" id="26734.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26734.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26734.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26734.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="27"/>
+              <Domain name="enum" id="26734.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26734.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26734.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="18659" servers="1" compound_name="Aspect Ratio">
+            <Property name="HexQualityMeasure" id="18659.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="18659.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="18659.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="18659.Input.groups"/>
+              <Domain name="input_type" id="18659.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="18659.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="18659.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="18659.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="1"/>
+              <Domain name="enum" id="18659.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="18659.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="18659.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26676" servers="1" compound_name="Collapse Ratio">
+            <Property name="HexQualityMeasure" id="26676.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26676.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26676.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26676.Input.groups"/>
+              <Domain name="input_type" id="26676.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26676.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26676.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26676.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="7"/>
+              <Domain name="enum" id="26676.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26676.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26676.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26319" servers="1" compound_name="Condition">
+            <Property name="HexQualityMeasure" id="26319.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26319.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26319.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26319.Input.groups"/>
+              <Domain name="input_type" id="26319.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26319.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26319.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26319.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="9"/>
+              <Domain name="enum" id="26319.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26319.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26319.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26307" servers="1" compound_name="Distortion">
+            <Property name="HexQualityMeasure" id="26307.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26307.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26307.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26307.Input.groups"/>
+              <Domain name="input_type" id="26307.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26307.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26307.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26307.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="15"/>
+              <Domain name="enum" id="26307.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26307.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26307.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="18647" servers="1" compound_name="Edge Ratio">
+            <Property name="HexQualityMeasure" id="18647.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="18647.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="18647.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="18647.Input.groups"/>
+              <Domain name="input_type" id="18647.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="18647.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="18647.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="18647.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="18647.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="18647.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="18647.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26284" servers="1" compound_name="Jacobian">
+            <Property name="HexQualityMeasure" id="26284.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26284.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26284.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26284.Input.groups"/>
+              <Domain name="input_type" id="26284.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26284.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26284.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26284.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="25"/>
+              <Domain name="enum" id="26284.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26284.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26284.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26261" servers="1" compound_name="Minimum Dihedral Angle">
+            <Property name="HexQualityMeasure" id="26261.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26261.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26261.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26261.Input.groups"/>
+              <Domain name="input_type" id="26261.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26261.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26261.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26261.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="6"/>
+              <Domain name="enum" id="26261.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26261.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26261.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="18334" servers="1" compound_name="Radius Ratio">
+            <Property name="HexQualityMeasure" id="18334.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="18334.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="18334.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="18334.Input.groups"/>
+              <Domain name="input_type" id="18334.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="18334.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="18334.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="18334.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="18334.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="18334.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="18334.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26238" servers="1" compound_name="Relative Size Squared">
+            <Property name="HexQualityMeasure" id="26238.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26238.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26238.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26238.Input.groups"/>
+              <Domain name="input_type" id="26238.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26238.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26238.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26238.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="12"/>
+              <Domain name="enum" id="26238.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26238.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26238.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26215" servers="1" compound_name="Scaled Jacobian">
+            <Property name="HexQualityMeasure" id="26215.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26215.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26215.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26215.Input.groups"/>
+              <Domain name="input_type" id="26215.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26215.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26215.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26215.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="10"/>
+              <Domain name="enum" id="26215.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26215.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26215.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26192" servers="1" compound_name="Shape">
+            <Property name="HexQualityMeasure" id="26192.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26192.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26192.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26192.Input.groups"/>
+              <Domain name="input_type" id="26192.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26192.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26192.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26192.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="13"/>
+              <Domain name="enum" id="26192.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26192.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26192.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="19366" servers="1" compound_name="Shape and Size">
+            <Property name="HexQualityMeasure" id="19366.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="19366.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="19366.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="19366.Input.groups"/>
+              <Domain name="input_type" id="19366.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="19366.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="19366.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="19366.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="14"/>
+              <Domain name="enum" id="19366.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="19366.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="19366.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="MeshQuality" id="26169" servers="1" compound_name="Volume">
+            <Property name="HexQualityMeasure" id="26169.HexQualityMeasure" number_of_elements="1">
+              <Element index="0" value="5"/>
+              <Domain name="enum" id="26169.HexQualityMeasure.enum">
+                <Entry value="21" text="Diagonal"/>
+                <Entry value="22" text="Dimension"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="Input" id="26169.Input" number_of_elements="1">
+              <Proxy value="41608" output_port="0"/>
+              <Domain name="groups" id="26169.Input.groups"/>
+              <Domain name="input_type" id="26169.Input.input_type"/>
+            </Property>
+            <Property name="QuadQualityMeasure" id="26169.QuadQualityMeasure" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="enum" id="26169.QuadQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="5" text="Maximum Aspect Frobenius"/>
+                <Entry value="16" text="Maximum Edge Ratio"/>
+                <Entry value="4" text="Mean Aspect Frobenius"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="23" text="Oddy"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="11" text="Shear"/>
+                <Entry value="24" text="Shear and Size"/>
+                <Entry value="17" text="Skew"/>
+                <Entry value="20" text="Stretch"/>
+                <Entry value="18" text="Taper"/>
+                <Entry value="26" text="Warpage"/>
+              </Domain>
+            </Property>
+            <Property name="TetQualityMeasure" id="26169.TetQualityMeasure" number_of_elements="1">
+              <Element index="0" value="19"/>
+              <Domain name="enum" id="26169.TetQualityMeasure.enum">
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="29" text="Aspect Beta"/>
+                <Entry value="27" text="Aspect Gamma"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="7" text="Collapse Ratio"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="25" text="Jacobian"/>
+                <Entry value="6" text="Minimum Dihedral Angle"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+                <Entry value="19" text="Volume"/>
+              </Domain>
+            </Property>
+            <Property name="TriangleQualityMeasure" id="26169.TriangleQualityMeasure" number_of_elements="1">
+              <Element index="0" value="2"/>
+              <Domain name="enum" id="26169.TriangleQualityMeasure.enum">
+                <Entry value="28" text="Area"/>
+                <Entry value="1" text="Aspect Ratio"/>
+                <Entry value="3" text="Aspect Frobenius"/>
+                <Entry value="9" text="Condition"/>
+                <Entry value="15" text="Distortion"/>
+                <Entry value="0" text="Edge Ratio"/>
+                <Entry value="8" text="Maximum Angle"/>
+                <Entry value="6" text="Minimum Angle"/>
+                <Entry value="10" text="Scaled Jacobian"/>
+                <Entry value="2" text="Radius Ratio"/>
+                <Entry value="12" text="Relative Size Squared"/>
+                <Entry value="13" text="Shape"/>
+                <Entry value="14" text="Shape and Size"/>
+              </Domain>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="ProgrammableFilter" id="41608" servers="1" compound_name="input_PF">
+            <Property name="CopyArrays" id="41608.CopyArrays" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="bool" id="41608.CopyArrays.bool"/>
+            </Property>
+            <Property name="InformationScript" id="41608.InformationScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Input" id="41608.Input" number_of_elements="1">
+              <Domain name="groups" id="41608.Input.groups"/>
+              <Domain name="input_type" id="41608.Input.input_type"/>
+            </Property>
+            <Property name="OutputDataSetType" id="41608.OutputDataSetType" number_of_elements="1">
+              <Element index="0" value="8"/>
+              <Domain name="enum" id="41608.OutputDataSetType.enum">
+                <Entry value="8" text="Same as Input"/>
+                <Entry value="0" text="vtkPolyData"/>
+                <Entry value="2" text="vtkStructuredGrid"/>
+                <Entry value="3" text="vtkRectilinearGrid"/>
+                <Entry value="4" text="vtkUnstructuredGrid"/>
+                <Entry value="6" text="vtkImageData"/>
+                <Entry value="10" text="vtkUniformGrid"/>
+                <Entry value="13" text="vtkMultiblockDataSet"/>
+                <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+                <Entry value="32" text="vtkHyperTreeGrid"/>
+                <Entry value="19" text="vtkTable"/>
+                <Entry value="33" text="vtkMolecule"/>
+              </Domain>
+            </Property>
+            <Property name="PythonPath" id="41608.PythonPath" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Script" id="41608.Script" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="TimestepValues" id="41608.TimestepValues"/>
+            <Property name="UpdateExtentScript" id="41608.UpdateExtentScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="ProgrammableFilter" id="27563" servers="1" compound_name="output_PF">
+            <Property name="CopyArrays" id="27563.CopyArrays" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="bool" id="27563.CopyArrays.bool"/>
+            </Property>
+            <Property name="InformationScript" id="27563.InformationScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Input" id="27563.Input" number_of_elements="16">
+              <Proxy value="18334" output_port="0"/>
+              <Proxy value="18647" output_port="0"/>
+              <Proxy value="18659" output_port="0"/>
+              <Proxy value="19366" output_port="0"/>
+              <Proxy value="26169" output_port="0"/>
+              <Proxy value="26192" output_port="0"/>
+              <Proxy value="26215" output_port="0"/>
+              <Proxy value="26238" output_port="0"/>
+              <Proxy value="26261" output_port="0"/>
+              <Proxy value="26284" output_port="0"/>
+              <Proxy value="26307" output_port="0"/>
+              <Proxy value="26319" output_port="0"/>
+              <Proxy value="26676" output_port="0"/>
+              <Proxy value="26699" output_port="0"/>
+              <Proxy value="26722" output_port="0"/>
+              <Proxy value="26734" output_port="0"/>
+              <Domain name="groups" id="27563.Input.groups"/>
+              <Domain name="input_type" id="27563.Input.input_type"/>
+            </Property>
+            <Property name="OutputDataSetType" id="27563.OutputDataSetType" number_of_elements="1">
+              <Element index="0" value="8"/>
+              <Domain name="enum" id="27563.OutputDataSetType.enum">
+                <Entry value="8" text="Same as Input"/>
+                <Entry value="0" text="vtkPolyData"/>
+                <Entry value="2" text="vtkStructuredGrid"/>
+                <Entry value="3" text="vtkRectilinearGrid"/>
+                <Entry value="4" text="vtkUnstructuredGrid"/>
+                <Entry value="6" text="vtkImageData"/>
+                <Entry value="10" text="vtkUniformGrid"/>
+                <Entry value="13" text="vtkMultiblockDataSet"/>
+                <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+                <Entry value="32" text="vtkHyperTreeGrid"/>
+                <Entry value="19" text="vtkTable"/>
+                <Entry value="33" text="vtkMolecule"/>
+              </Domain>
+            </Property>
+            <Property name="PythonPath" id="27563.PythonPath" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Script" id="27563.Script" number_of_elements="1">
+              <Element index="0" value="import numpy as np&#xa;&#xa;measures = [&#x22;Radius Ratio&#x22;, &#x22;Edge Ratio&#x22;, &#x22;Aspect Ratio&#x22;, &#x22;Shape and Size&#x22;, &#x22;Volume&#x22;, &#x22;Shape&#x22;, &#x22;Scaled Jacobian&#x22;, &#x22;Relative Size Squared&#x22;, &#x22;Minimum Dihedral Angle&#x22;, &#x22;Jacobian&#x22;, &#x22;Distortian&#x22;, &#x22;Condition&#x22;, &#x22;Collapse Ratio&#x22;, &#x22;Aspect Frobenius&#x22;, &#x22;Aspect Beta&#x22;, &#x22;Aspect Gamma&#x22;]&#xa;labels = [&#x22;Measure&#x22;, &#x22;Mean&#x22;, &#x22;Min&#x22;, &#x22;Max&#x22;, &#x22;std&#x22;, &#x22;var&#x22;, &#x22;Q1&#x22;, &#x22;Q2&#x22;, &#x22;Q3&#x22;, &#x22;P10&#x22;, &#x22;P90&#x22;]&#xa;field_data = np.zeros((len(inputs),len(labels)))&#xa;&#xa;for idx, input in enumerate(inputs):&#xa;    data = input.CellData[&#x22;Quality&#x22;]&#xa;    output.CellData.append(data, f&#x22;Quality_{measures[idx]}_{idx}&#x22;)&#xa;&#xa;    # field data&#xa;    field_data[idx,:] = np.array([&#xa;        idx,&#xa;        np.mean(data),&#xa;        np.min(data),&#xa;        np.max(data),&#xa;        np.std(data),&#xa;        np.var(data),&#xa;        np.percentile(data, 25),&#xa;        np.percentile(data, 50),&#xa;        np.percentile(data, 75),&#xa;        np.percentile(data, 10),&#xa;        np.percentile(data, 90),    &#xa;    ])&#xa;&#xa;  &#xa;for col,lab in zip(field_data.T, labels):&#xa;    output.FieldData.append(col, lab)&#xa;&#xa;&#xa;    "/>
+            </Property>
+            <Property name="TimestepValues" id="27563.TimestepValues"/>
+            <Property name="UpdateExtentScript" id="27563.UpdateExtentScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+          </Proxy>
+          <ExposedProperties>
+            <Property name="Input" proxy_name="input_PF" exposed_name="in"/>
+          </ExposedProperties>
+          <OutputPort name="out" proxy="output_PF" port_index="0"/>
+          <Hints>
+            <ShowInMenu/>
+          </Hints>
+        </CompoundSourceProxy>
+      </CustomProxyDefinition>
+      <CustomProxyDefinition name="my_rel_histogram" group="filters">
+        <CompoundSourceProxy id="15574" servers="1">
+          <Proxy group="filters" type="ExtractHistogram" id="15366" servers="1" compound_name="Histogram1">
+            <Property name="BinCount" id="15366.BinCount" number_of_elements="1">
+              <Element index="0" value="10"/>
+              <Domain name="range" id="15366.BinCount.range"/>
+            </Property>
+            <Property name="CalculateAverages" id="15366.CalculateAverages" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="bool" id="15366.CalculateAverages.bool"/>
+            </Property>
+            <Property name="CenterBinsAroundMinAndMax" id="15366.CenterBinsAroundMinAndMax" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="bool" id="15366.CenterBinsAroundMinAndMax.bool"/>
+            </Property>
+            <Property name="Component" id="15366.Component" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="comps" id="15366.Component.comps">
+                <Entry value="0" text=""/>
+              </Domain>
+            </Property>
+            <Property name="CustomBinRanges" id="15366.CustomBinRanges" number_of_elements="2">
+              <Element index="0" value="1"/>
+              <Element index="1" value="58.58634436198539"/>
+              <Domain name="scalar_range" id="15366.CustomBinRanges.scalar_range"/>
+            </Property>
+            <Property name="Input" id="15366.Input" number_of_elements="1">
+              <Domain name="groups" id="15366.Input.groups"/>
+              <Domain name="input_array" id="15366.Input.input_array"/>
+              <Domain name="input_type" id="15366.Input.input_type"/>
+            </Property>
+            <Property name="SelectInputArray" id="15366.SelectInputArray" number_of_elements="5">
+              <Element index="0" value=""/>
+              <Element index="1" value=""/>
+              <Element index="2" value=""/>
+              <Element index="3" value="1"/>
+              <Element index="4" value="Quality_Aspect Beta_14"/>
+              <Domain name="array_list" id="15366.SelectInputArray.array_list">
+                <String text="Quality_Aspect Beta_14"/>
+                <String text="Quality_Aspect Frobenius_13"/>
+                <String text="Quality_Aspect Gamma_15"/>
+                <String text="Quality_Aspect Ratio_2"/>
+                <String text="Quality_Collapse Ratio_12"/>
+                <String text="Quality_Condition_11"/>
+                <String text="Quality_Distortian_10"/>
+                <String text="Quality_Edge Ratio_1"/>
+                <String text="Quality_Jacobian_9"/>
+                <String text="Quality_Minimum Dihedral Angle_8"/>
+                <String text="Quality_Radius Ratio_0"/>
+                <String text="Quality_Relative Size Squared_7"/>
+                <String text="Quality_Scaled Jacobian_6"/>
+                <String text="Quality_Shape and Size_3"/>
+                <String text="Quality_Shape_5"/>
+                <String text="Quality_Volume_4"/>
+              </Domain>
+            </Property>
+            <Property name="UseCustomBinRanges" id="15366.UseCustomBinRanges" number_of_elements="1">
+              <Element index="0" value="0"/>
+              <Domain name="bool" id="15366.UseCustomBinRanges.bool"/>
+            </Property>
+          </Proxy>
+          <Proxy group="filters" type="ProgrammableFilter" id="15425" servers="1" compound_name="ProgrammableFilter1">
+            <Property name="CopyArrays" id="15425.CopyArrays" number_of_elements="1">
+              <Element index="0" value="1"/>
+              <Domain name="bool" id="15425.CopyArrays.bool"/>
+            </Property>
+            <Property name="InformationScript" id="15425.InformationScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Input" id="15425.Input" number_of_elements="1">
+              <Proxy value="15366" output_port="0"/>
+              <Domain name="groups" id="15425.Input.groups"/>
+              <Domain name="input_type" id="15425.Input.input_type"/>
+            </Property>
+            <Property name="OutputDataSetType" id="15425.OutputDataSetType" number_of_elements="1">
+              <Element index="0" value="8"/>
+              <Domain name="enum" id="15425.OutputDataSetType.enum">
+                <Entry value="8" text="Same as Input"/>
+                <Entry value="0" text="vtkPolyData"/>
+                <Entry value="2" text="vtkStructuredGrid"/>
+                <Entry value="3" text="vtkRectilinearGrid"/>
+                <Entry value="4" text="vtkUnstructuredGrid"/>
+                <Entry value="6" text="vtkImageData"/>
+                <Entry value="10" text="vtkUniformGrid"/>
+                <Entry value="13" text="vtkMultiblockDataSet"/>
+                <Entry value="15" text="vtkHierarchicalBoxDataSet"/>
+                <Entry value="32" text="vtkHyperTreeGrid"/>
+                <Entry value="19" text="vtkTable"/>
+                <Entry value="33" text="vtkMolecule"/>
+              </Domain>
+            </Property>
+            <Property name="PythonPath" id="15425.PythonPath" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+            <Property name="Script" id="15425.Script" number_of_elements="1">
+              <Element index="0" value="import numpy as np&#xa;&#xa;input = inputs[0]&#xa;histogram_data = input.RowData[&#x22;bin_values&#x22;]&#xa;n = np.sum(histogram_data)&#xa;&#xa;output.RowData.append(histogram_data / n, &#x22;bin_values&#x22;)"/>
+            </Property>
+            <Property name="TimestepValues" id="15425.TimestepValues"/>
+            <Property name="UpdateExtentScript" id="15425.UpdateExtentScript" number_of_elements="1">
+              <Element index="0" value=""/>
+            </Property>
+          </Proxy>
+          <ExposedProperties>
+            <Property name="BinCount" proxy_name="Histogram1" exposed_name="Bin Count"/>
+            <Property name="CalculateAverages" proxy_name="Histogram1" exposed_name="Calculate Averages"/>
+            <Property name="CenterBinsAroundMinAndMax" proxy_name="Histogram1" exposed_name="Center Bins Around Min And Max"/>
+            <Property name="Component" proxy_name="Histogram1" exposed_name="Component"/>
+            <Property name="CustomBinRanges" proxy_name="Histogram1" exposed_name="Custom Bin Ranges"/>
+            <Property name="Input" proxy_name="Histogram1" exposed_name="Input"/>
+            <Property name="SelectInputArray" proxy_name="Histogram1" exposed_name="Select Input Array"/>
+            <Property name="UseCustomBinRanges" proxy_name="Histogram1" exposed_name="Use Custom Bin Ranges"/>
+          </ExposedProperties>
+          <OutputPort name="Output" proxy="ProgrammableFilter1" port_index="0"/>
+          <Hints>
+            <ShowInMenu/>
+          </Hints>
+        </CompoundSourceProxy>
+      </CustomProxyDefinition>
+    </CustomProxyDefinitions>
+    <Links/>
+    <Settings>
+      <SettingsProxy group="settings" type="ColorPalette">
+        <Links>
+          <Property source_property="SelectionColor" target_id="10907" target_property="Color" unlink_if_modified="1"/>
+          <Property source_property="SelectionColor" target_id="10929" target_property="Color" unlink_if_modified="1"/>
+          <Property source_property="SelectionColor" target_id="10951" target_property="Color" unlink_if_modified="1"/>
+        </Links>
+      </SettingsProxy>
+      <SettingsProxy group="settings" type="GeneralSettings">
+        <Links>
+          <Property source_property="ScreenPixelsPerInch" target_id="10873" target_property="PPI" unlink_if_modified="0"/>
+        </Links>
+      </SettingsProxy>
+      <SettingsProxy group="settings" type="RenderViewInteractionSettings">
+        <Links/>
+      </SettingsProxy>
+      <SettingsProxy group="settings" type="RenderViewSettings">
+        <Links/>
+      </SettingsProxy>
+      <SettingsProxy group="settings" type="RepresentedArrayListSettings">
+        <Links/>
+      </SettingsProxy>
+    </Settings>
+  </ServerManagerState>
+  <InteractiveViewLinks/>
+</ParaView>
